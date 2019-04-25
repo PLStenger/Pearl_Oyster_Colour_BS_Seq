@@ -1,0 +1,17 @@
+run*
+*~
+*.txt
+*.fastq.gz
+*.fq.gz
+*paired*
+*single*
+*.gz
+*.zip
+*fq
+*fastq
+genome*
+*.md5
+*.html
+*.pdf
+*.cvs
+*.fastqc
