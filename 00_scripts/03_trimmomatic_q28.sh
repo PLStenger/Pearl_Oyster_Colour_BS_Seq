@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
-#PBS -N trimmomatic__BASE__
-#PBS -q omp
-#PBS -l ncpus=8
-#PBS -l mem=60gb
-#PBS -l walltime=96:00:00
-#PBS -r n
+#PBS -q mpi
+#PBS -l walltime=48:00:00
+#PBS -l select=1:ncpus=28:mem=115g
 
 # Header
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/BS_seq_yoyo_unzip
-DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/03_trimmed
-SCRIPT=$0
-HEADER=/home1/datawork/plstenge/Pearl_Oyster_Colour_Population_Genomics/00_scripts/header.txt
-TRIMMOMATICENV=". /appli/bioinfo/trimmomatic/latest/env.sh"
-TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
-LOG_FOLDER=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/98_log_files
-NAME=$(basename $0)
+#DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/03_trimmed
+#SCRIPT=$0
+#HEADER=/home1/datawork/plstenge/Pearl_Oyster_Colour_Population_Genomics/00_scripts/header.txt
+#TRIMMOMATICENV=". /appli/bioinfo/trimmomatic/latest/env.sh"
+#TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
+#LOG_FOLDER=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/98_log_files
+#NAME=$(basename $0)
 
 cd $DATADIRECTORY
 
@@ -23,8 +20,12 @@ cd $DATADIRECTORY
 #>Illumina_TruSeq_LT_R1 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
 #>Illumina_TruSeq_LT_R2 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
 ADAPTERFILE=/home1/datahome/plstenge/Pearl_Oyster_Colour_Population_Genomics/00_scripts/adapters.fasta
-NCPU=8
-base=__BASE__
+#NCPU=8
+#base=__BASE__
+
+# Lunch this one first time
+for i in `ls -1 *R1*.fastq.gz | sed 's/\_R1.fastq.gz//'`; do echo trimmomatic PE -Xmx60G -threads 8 -phred33 $i\_R1.fastq.gz $i\_R2.fastq.gz $i\_R1_paired.fastq.gz $i\_R1_unpaired.fastq.gz $i\_R2_paired.fastq.gz $i\_R2_unpaired.fastq.gz ILLUMINACLIP:"$ADAPTERFILE":2:30:10 LEADING:28 TRAILING:28 SLIDINGWINDOW:24:28 MINLEN:40 >> cmd_file_for_trimmomatic; done
+
 
 ### Parameter explanations:
  ## - LEADING: quality: Specifies the minimum quality required to keep a base.
@@ -43,22 +44,22 @@ base=__BASE__
   # This module removes reads that fall below the specified minimal length. If required, it should normally be after all other processing steps. 
   # Reads removed by this step will be counted and included in the „dropped reads‟ count presented in the trimmomatic summary.
 
-$TRIMMOMATICENV
+#$TRIMMOMATICENV
 
-cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
+#cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
-trimmomatic PE -Xmx60G \
-        -threads 8 \
-        -phred33 \
-        $DATADIRECTORY/"$base"_R1.fastq.gz \
-        $DATADIRECTORY/"$base"_R2.fastq.gz \
-        $DATAOUTPUT/"$base"_R1.paired.fastq.gz \
-        $DATAOUTPUT/"$base"_R1.single.fastq.gz \
-        $DATAOUTPUT/"$base"_R2.paired.fastq.gz \
-        $DATAOUTPUT/"$base"_R2.single.fastq.gz \
-        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
-        LEADING:28 \
-        TRAILING:28 \
-        SLIDINGWINDOW:24:28 \
-        MINLEN:40 2> $LOG_FOLDER/log.trimmomatic.pe."$TIMESTAMP"
+#trimmomatic PE -Xmx60G \
+#-threads 8 \
+#        -phred33 \
+#        $DATADIRECTORY/"$base"_R1.fastq.gz \
+#        $DATADIRECTORY/"$base"_R2.fastq.gz \
+#        $DATAOUTPUT/"$base"_R1.paired.fastq.gz \
+#        $DATAOUTPUT/"$base"_R1.single.fastq.gz \
+#        $DATAOUTPUT/"$base"_R2.paired.fastq.gz \
+#        $DATAOUTPUT/"$base"_R2.single.fastq.gz \
+#        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
+#        LEADING:28 \
+#        TRAILING:28 \
+#        SLIDINGWINDOW:24:28 \
+#        MINLEN:40 2> $LOG_FOLDER/log.trimmomatic.pe."$TIMESTAMP"
 	
