@@ -5,7 +5,7 @@
 
 # Header
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/BS_seq_yoyo_unzip
-#DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/03_trimmed
+DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/03_trimmed
 #SCRIPT=$0
 #HEADER=/home1/datawork/plstenge/Pearl_Oyster_Colour_Population_Genomics/00_scripts/header.txt
 #TRIMMOMATICENV=". /appli/bioinfo/trimmomatic/latest/env.sh"
@@ -23,8 +23,8 @@ ADAPTERFILE=/home1/datahome/plstenge/Pearl_Oyster_Colour_Population_Genomics/00_
 #NCPU=8
 #base=__BASE__
 
-# Lunch this one first time
-for i in `ls -1 *R1*.fastq.gz | sed 's/\_R1.fastq.gz//'`; do echo trimmomatic PE -Xmx60G -threads 8 -phred33 $i\_R1.fastq.gz $i\_R2.fastq.gz $i\_R1_paired.fastq.gz $i\_R1_unpaired.fastq.gz $i\_R2_paired.fastq.gz $i\_R2_unpaired.fastq.gz ILLUMINACLIP:"$ADAPTERFILE":2:30:10 LEADING:28 TRAILING:28 SLIDINGWINDOW:24:28 MINLEN:40 >> cmd_file_for_trimmomatic; done
+# Lunch this one first time in order to obtain the script below
+for i in `ls -1 *R1*.fastq.gz | sed 's/\_R1.fastq.gz//'`; do echo trimmomatic PE -Xmx60G -threads 8 -phred33 $DATADIRECTORY/$i\_R1.fastq.gz $DATADIRECTORY/$i\_R2.fastq.gz $DATAOUTPUT/$i\_R1_paired.fastq.gz $DATAOUTPUT/$i\_R1_unpaired.fastq.gz $DATAOUTPUT/$i\_R2_paired.fastq.gz $DATAOUTPUT/$i\_R2_unpaired.fastq.gz ILLUMINACLIP:"$ADAPTERFILE":2:30:10 LEADING:28 TRAILING:28 SLIDINGWINDOW:24:28 MINLEN:40 >> $DATAOUTPUT/cmd_file_for_trimmomatic; done
 
 
 ### Parameter explanations:
@@ -46,20 +46,3 @@ for i in `ls -1 *R1*.fastq.gz | sed 's/\_R1.fastq.gz//'`; do echo trimmomatic PE
 
 #$TRIMMOMATICENV
 
-#cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
-
-#trimmomatic PE -Xmx60G \
-#-threads 8 \
-#        -phred33 \
-#        $DATADIRECTORY/"$base"_R1.fastq.gz \
-#        $DATADIRECTORY/"$base"_R2.fastq.gz \
-#        $DATAOUTPUT/"$base"_R1.paired.fastq.gz \
-#        $DATAOUTPUT/"$base"_R1.single.fastq.gz \
-#        $DATAOUTPUT/"$base"_R2.paired.fastq.gz \
-#        $DATAOUTPUT/"$base"_R2.single.fastq.gz \
-#        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
-#        LEADING:28 \
-#        TRAILING:28 \
-#        SLIDINGWINDOW:24:28 \
-#        MINLEN:40 2> $LOG_FOLDER/log.trimmomatic.pe."$TIMESTAMP"
-	
