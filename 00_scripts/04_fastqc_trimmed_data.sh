@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/03_trimmed
+DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/03_trimmed
 DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/04_fastqc_trimmed
 SCRIPT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/00_scripts/04_fastqc_trimmed_data
 HEADER=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/00_scripts/header.txt
