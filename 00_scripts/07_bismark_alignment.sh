@@ -7,6 +7,7 @@
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
 GENOME=/home1/datawork/plstenge/Pearl_Oyster_Colour_Population_Genomics/01_data/
+OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 BISMARK_ENV=". /appli/bioinfo/bismark/0.19/env.sh" #version 0.19
 
 # Options
@@ -24,4 +25,4 @@ $BISMARK_ENV
 cd $DATADIRECTORY
 #cd $GENOME
 
-bismark -l 20 -n 0 -p 4 -q --genome $GENOME {-1 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz} 
+bismark -l 20 -n 0 -p 4 -q --genome $GENOME -1 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz > $OUTPUT/Index_10.2-V-620.sam 
