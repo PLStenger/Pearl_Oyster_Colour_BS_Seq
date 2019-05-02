@@ -25,4 +25,4 @@ $BISMARK_ENV
 cd $DATADIRECTORY
 #cd $GENOME
 
-bismark -l 20 -n 0 -p 4 -q --genome $GENOME -1 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz > $OUTPUT/Index_10.2-V-620.sam 
+bismark -l 20 -n 0 -p 4 -q --genome $GENOME -1 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz > $OUTPUT 
