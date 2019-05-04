@@ -4,11 +4,11 @@
 #PBS -l select=1:ncpus=28:mem=115g
 
 
-DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_02_test_bismark
+DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_04_test_bismark
 READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
 GENOME=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome
 #OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
-OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_02_test_bismark
+OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_04_test_bismark
 
 BISMARK_ENV=". /appli/bioinfo/bismark/0.19/env.sh" #version 0.19
 
