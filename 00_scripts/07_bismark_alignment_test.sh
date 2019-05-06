@@ -4,11 +4,11 @@
 #PBS -l select=1:ncpus=28:mem=115g
 
 
-DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_06_test_bismark
+DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_08_test_bismark
 READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
 GENOME=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome
 #OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
-OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_06_test_bismark
+OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/99_08_test_bismark
 
 BISMARK_ENV=". /appli/bioinfo/bismark/0.19/env.sh" #version 0.19
 
@@ -27,4 +27,4 @@ $BISMARK_ENV
 cd $DATADIRECTORY
 #cd $GENOME
 
-bismark -l 40 -n 0 -p 4 -q --genome $GENOME -1 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz > $OUTPUT/Index_10.2-V-620.sam
+bismark -l 30 -n 0 -p 4 -q --genome $GENOME -1 --score_min L,0,-0.6 $READS/Index_10.2-V-620_R1_paired.fastq.gz -2 $READS/Index_10.2-V-620_R2_paired.fastq.gz > $OUTPUT/Index_10.2-V-620.sam
