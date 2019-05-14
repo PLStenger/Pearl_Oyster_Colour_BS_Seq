@@ -13,4 +13,4 @@ BISMARK_ENV=". /appli/bioinfo/bismark/0.19/env.sh" #version 0.19
 cd $DATADIRECTORY
 $BISMARK_ENV
 
-bismark_methylation_extractor -s --bedGraph --counts --buffer_size 10G -- cytosine_report --genome_folder $GENOME $BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam
+bismark_methylation_extractor -s --bedGraph --counts --buffer_size 10G -- cytosine_report --genome_folder $GENOME Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam
