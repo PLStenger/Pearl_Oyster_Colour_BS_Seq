@@ -20,6 +20,6 @@ $BISMARK_ENV
 #bismark_methylation_extractor -p --no_overlap --report Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam
 
 
-bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_report --genome_folder $GENOME --multicore $NCPU -o $BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam $OUTPUT/result_
+bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_report --genome_folder $GENOME --multicore $NCPU $BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam -o $OUTPUT
 
 
