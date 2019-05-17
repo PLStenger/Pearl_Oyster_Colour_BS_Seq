@@ -7,7 +7,8 @@
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
 GENOME=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome
-OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
+#OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
+OUTPUT=/home1/scratch/plstenge/bismark_alignment
 
 BISMARK_ENV=". /appli/bioinfo/bismark/0.19/env.sh" #version 0.19
 
