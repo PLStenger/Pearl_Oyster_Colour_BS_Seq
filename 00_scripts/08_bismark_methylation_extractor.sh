@@ -5,7 +5,8 @@
 
 
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/07_bismark_methylation_extractor
-READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
+#READS=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/05_concatenated
+READS=/home1/scratch/plstenge/bismark_alignment
 GENOME=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome
 BAM=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 #OUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/07_bismark_methylation_extractor
@@ -56,7 +57,7 @@ bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_
 
 bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_report --genome_folder $GENOME --multicore $NCPU $BAM/Index_9.1-V-620_R1_paired_bismark_bt2_pe.bam -o $OUTPUT
 
-bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_report --genome_folder $GENOME --multicore $NCPU $BAM/Index_2.1-R-183_R1_paired_bismark_bt2_pe.bam  -o $OUTPUT
-
+#bismark_methylation_extractor -p --no_overlap --bedGraph --scaffolds --cytosine_report --genome_folder $GENOME --multicore $NCPU $BAM/Index_2.1-R-183_R1_paired_bismark_bt2_pe.bam  -o $OUTPUT
+# Dernier à verifier
 
 
