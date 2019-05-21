@@ -18,5 +18,6 @@ cd $BAM
 
 $METHYLEXTRACT_ENV
 
-perl $METHYLEXTRACT_ENV seq=$GENOME inDir=$BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam minQ=30 varFraction=0.05 maxPval=0.01 flagW=99,147 flagC=83,163 bedOut=Y outDir=$OUTPUT
+#perl $METHYLEXTRACT_ENV seq=$GENOME inDir=$BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam minQ=30 varFraction=0.05 maxPval=0.01 flagW=99,147 flagC=83,163 bedOut=Y outDir=$OUTPUT
+perl $METHYLEXTRACT_ENV seq=$GENOME inDir=$BAM minQ=30 varFraction=0.05 maxPval=0.01 flagW=99,147 flagC=83,163 bedOut=Y outDir=$OUTPUT
 #pattern=ALL
