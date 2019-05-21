@@ -18,5 +18,5 @@ cd $BAM
 
 $METHYLEXTRACT_ENV
 
-perl $METHYLEXTRACT_ENV seq=$GENOME/sspace.final.scaffolds.fasta inDir=$BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam methDataset/inDir/ minQ=30 varFraction=0.05 maxPval=0.01 pattern=ALL bedOut=Y outDir=$OUTPUT
+perl $METHYLEXTRACT_ENV seq=$GENOME inDir=$BAM/Index_10.2-V-620_R1_paired_bismark_bt2_pe.bam methDataset/inDir/ minQ=30 varFraction=0.05 maxPval=0.01 pattern=ALL bedOut=Y outDir=$OUTPUT
 
