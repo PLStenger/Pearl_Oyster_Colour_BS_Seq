@@ -9,7 +9,8 @@ BAM=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 
 OUTPUT=/home1/scratch/plstenge/methylextract_result
 
-METHYLEXTRACT_ENV=". /appli/bioinfo/methylextract/1.9.1/env.sh" #version 1.9.1
+#METHYLEXTRACT_ENV=". /appli/bioinfo/methylextract/1.9.1/env.sh" #version 1.9.1
+METHYLEXTRACT_ENV=/home1/datawork/plstenge/96_env_conda/methylextract
 
 NCPU=4
 
