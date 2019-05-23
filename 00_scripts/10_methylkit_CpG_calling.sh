@@ -20,8 +20,8 @@ export PATH=$PATH:/appli/anaconda/2.7/bin
 #Chargement de votre environnement
 source activate /home1/datawork/plstenge/96_env_conda/methylkit 
 
-SCRIPT_R=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/00_scripts/10_methylkit.R
+SCRIPT_R=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/00_scripts/10_methylkit_CpG_calling.R
 
-Rscript --vanilla $SCRIPT_R 2>&1 ${SCRIPT_FOLDER}/10_methylkit.out
+Rscript --vanilla $SCRIPT_R > ${SCRIPT_FOLDER}/10_methylkit_CpG_calling.out
 
 
