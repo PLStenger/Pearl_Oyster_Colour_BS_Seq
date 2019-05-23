@@ -123,13 +123,13 @@ write.table(Diffmeth.norm, file = "Diffmeth.norm.txt", sep = "\t", quote = FALSE
 
 message("Diffmeth.norm done")
 
-Diffmeth.norm.interest=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.001)
+Diffmeth.norm.interest=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.01)
 write.table(Diffmeth.norm.interest, file = "Diffmeth.norm.diff25.q0.001.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.norm.interest.hyper=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.001, type = "hyper")
+Diffmeth.norm.interest.hyper=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.01, type = "hyper")
 write.table(Diffmeth.norm.interest.hyper, file = "Diffmeth.norm.diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.norm.interest.hypo=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.001, type = "hypo")
+Diffmeth.norm.interest.hypo=getMethylDiff(Diffmeth.norm, difference = 25, qvalue = 0.01, type = "hypo")
 write.table(Diffmeth.norm.interest.hypo, file = "Diffmeth.norm.diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
 
 # without normalization #
@@ -143,13 +143,13 @@ write.table(Diffmeth, file = "Diffmeth.txt", sep = "\t", quote = FALSE)
 
 message("Diffmeth done")
 
-Diffmeth.interest=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.001)
+Diffmeth.interest=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.01)
 write.table(Diffmeth.interest, file = "Diffmeth.diff25.q0.001.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.interest.hyper=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.001, type = "hyper")
+Diffmeth.interest.hyper=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.01, type = "hyper")
 write.table(Diffmeth.interest.hyper, file = "Diffmeth.diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.interest.hypo=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.001, type = "hypo")
+Diffmeth.interest.hypo=getMethylDiff(Diffmeth, difference = 25, qvalue = 0.01, type = "hypo")
 write.table(Diffmeth.interest.hypo, file = "Diffmeth.diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
 
 message("get diffmeth of interest done")
