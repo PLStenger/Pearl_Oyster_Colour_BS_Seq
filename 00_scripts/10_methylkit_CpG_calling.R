@@ -75,12 +75,24 @@ my_meth_control_green=processBismarkAln(location=list.bam_control_green,
                 treatment=c(0,1,2))
 
 # Descriptive statistics on samples
+print("my_meth_control_green[[1]]")
+my_meth_control_green[[1]]
+print("my_meth_control_green[[2]]")
+my_meth_control_green[[2]]
+print("my_meth_control_green[[3]]")
+my_meth_control_green[[3]]
+getMethylationStats(my_meth_control_green[[1]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_green[[1]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_green[[1]],plot=TRUE,both.strands=FALSE)
 getMethylationStats(my_meth_control_green[[2]],plot=FALSE,both.strands=FALSE)
 getMethylationStats(my_meth_control_green[[2]],plot=TRUE,both.strands=FALSE)
 getCoverageStats(my_meth_control_green[[2]],plot=TRUE,both.strands=FALSE)
+getMethylationStats(my_meth_control_green[[3]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_green[[3]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_green[[3]],plot=TRUE,both.strands=FALSE)
 
 save(my_meth_control_green, file = "my_meth_control_green.rda")
-print(my_meth_control_green[1]]@dbpath)
+#print(my_meth_control_green[[1]]@dbpath)
 message ("my_meth_control_green.done")
 
 
@@ -105,12 +117,18 @@ my_meth_control_red=processBismarkAln(location=list.bam_control_red,
                 mincov=10,
                 treatment=c(0,1,2))
 
+getMethylationStats(my_meth_control_red[[1]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_red[[1]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_red[[1]],plot=TRUE,both.strands=FALSE)
 getMethylationStats(my_meth_control_red[[2]],plot=FALSE,both.strands=FALSE)
 getMethylationStats(my_meth_control_red[[2]],plot=TRUE,both.strands=FALSE)
 getCoverageStats(my_meth_control_red[[2]],plot=TRUE,both.strands=FALSE)
+getMethylationStats(my_meth_control_red[[3]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_red[[3]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_red[[3]],plot=TRUE,both.strands=FALSE)
 
 save(my_meth_control_red, file = "my_meth_control_red.rda")
-print(my_meth_control_red[1]]@dbpath)
+#print(my_meth_control_red[[1]]@dbpath)
 message ("my_meth_control_red.done")
 
 
@@ -136,14 +154,124 @@ my_meth_control_yellow=processBismarkAln(location=list.bam_control_yellow,
                 mincov=10,
                 treatment=c(0,1,2))
 			 
+getMethylationStats(my_meth_control_yellow[[1]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_yellow[[1]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_yellow[[1]],plot=TRUE,both.strands=FALSE)
 getMethylationStats(my_meth_control_yellow[[2]],plot=FALSE,both.strands=FALSE)
 getMethylationStats(my_meth_control_yellow[[2]],plot=TRUE,both.strands=FALSE)
 getCoverageStats(my_meth_control_yellow[[2]],plot=TRUE,both.strands=FALSE)
+getMethylationStats(my_meth_control_yellow[[3]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_yellow[[3]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_yellow[[3]],plot=TRUE,both.strands=FALSE)
 			 
 
 save(my_meth_control_yellow, file = "my_meth_control_yellow.rda")
-print(my_meth_control_yellow[1]]@dbpath)
+#print(my_meth_control_yellow[[1]]@dbpath)
 message ("my_meth_control_yellow.done")
+
+###### TREATMENT YELLOW
+list.bam_treatment_yellow=list("Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### TREATMENT YELLOW
+list.id_treatment_yellow=list("3-J-7",
+"1-J-7",
+"2-J-7")
+
+my_meth_treatment_yellow=processBismarkAln(location=list.bam_treatment_yellow,
+                sample.id=list.id_treatment_yellow,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_treatment_yellow",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,1,2))
+			 
+			 getMethylationStats(my_meth_treatment_yellow[[1]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_yellow[[1]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_yellow[[1]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_yellow[[2]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_yellow[[2]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_yellow[[2]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_yellow[[3]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_yellow[[3]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_yellow[[3]],plot=TRUE,both.strands=FALSE)
+			 
+
+save(my_meth_treatment_yellow, file = "my_meth_treatment_yellow.rda")
+#print(my_meth_treatment_yellow[[1]]@dbpath)
+message ("my_meth_treatment_yellow.done")
+
+
+###### TREATMENT RED
+list.bam_treatment_red=list("Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### TREATMENT RED
+list.id_treatment_red=list("2-R-183",
+"3-R-183",
+"1-R-183")
+
+my_meth_treatment_red=processBismarkAln(location=list.bam_treatment_red,
+                sample.id=list.id_treatment_red,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_treatment_red",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,1,2))
+			 
+			 getMethylationStats(my_meth_treatment_red[[1]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_red[[1]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_red[[1]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_red[[2]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_red[[2]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_red[[2]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_red[[3]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_red[[3]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_red[[3]],plot=TRUE,both.strands=FALSE)
+			 
+
+save(my_meth_treatment_red, file = "my_meth_treatment_red.rda")
+#print(my_meth_treatment_red[[1]]@dbpath)
+message ("my_meth_treatment_red.done")
+
+
+###### TREATMENT GREEN
+list.bam_treatment_green=list("Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### TREATMENT GREEN
+list.id_treatment_green=list("2-V-620",
+"3-V-620",
+"1-V-620")
+
+my_meth_treatment_green=processBismarkAln(location=list.bam_treatment_green,
+                sample.id=list.id_treatment_green,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_treatment_green",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,1,2))
+			 
+			 getMethylationStats(my_meth_treatment_green[[1]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_green[[1]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_green[[1]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_green[[2]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_green[[2]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_green[[2]],plot=TRUE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_green[[3]],plot=FALSE,both.strands=FALSE)
+			 getMethylationStats(my_meth_treatment_green[[3]],plot=TRUE,both.strands=FALSE)
+			 getCoverageStats(my_meth_treatment_green[[3]],plot=TRUE,both.strands=FALSE)
+			 
+
+save(my_meth_treatment_green, file = "my_meth_treatment_green.rda")
+#print(my_meth_treatment_green[[1]]@dbpath)
+message ("my_meth_treatment_green.done")
 
 
 
