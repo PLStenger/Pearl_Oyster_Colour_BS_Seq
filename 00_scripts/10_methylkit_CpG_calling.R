@@ -12,43 +12,141 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 
 # A set of BAM or methylation call files #
 
-#list.bam=list("Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam",
-#                "Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam",
-#                "Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam",
-#                "Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam",
-#                "Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam",
-#                "Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam")
+# ALL
 
-list.bam=list("Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
-                "Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+#list.bam=list("Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
 
 
-#list.id=list("2-V-620",
-#                "3-V-620",
-#                "1-V-613",
-#                "2-V-613",
-#                "3-V-613",
-#                "1-V-620")
 
-list.id=list("2-V-620", "3-V-620")
+# ALL
+#list.id=list("3-J-7",
+#"2-V-620",
+#"1-R-180",
+#"3-V-620",
+#"2-R-180",
+#"3-R-180",
+#"2-R-183",
+#"1-J-2",
+#"3-R-183",
+#"2-J-2",
+#"1-V-613",
+#"3-J-2",
+#"2-V-613",
+#"1-J-7",
+#"3-V-613",
+#"1-R-183",
+#"1-V-620",
+#"2-J-7")
 
-myallmeth=processBismarkAln(location=list.bam,
-                sample.id=list.id,
+###### CONTROL GREEN
+list.bam_control_green=list("Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### CONTROL GREEN
+list.id_control_green=list("1-V-613",
+"2-V-613",
+"3-V-613")
+
+my_meth_control_green=processBismarkAln(location=list.bam_control_green,
+                sample.id=list.id_control_green,
                 assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call",
+                save.folder="methylation_call_control_green",
                 save.context=c("CpG"),
                 read.context="CpG",
                 mincov=10,
-                treatment=c(0,1))
-
-save(myallmeth, file = "R.objects/myallmeth.rda")
-print(myallmeth[[1]]@dbpath)
-message ("myallmeth.done")
+                treatment=c(0,1,2))
 
 # Descriptive statistics on samples
-getMethylationStats(myallmeth[[2]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(myallmeth[[2]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(myallmeth[[2]],plot=TRUE,both.strands=FALSE)
+getMethylationStats(my_meth_control_green[[2]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_green[[2]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_green[[2]],plot=TRUE,both.strands=FALSE)
+
+save(my_meth_control_green, file = "my_meth_control_green.rda")
+print(my_meth_control_green[1]]@dbpath)
+message ("my_meth_control_green.done")
+
+
+
+
+###### CONTROL RED
+list.bam_control_red=list("Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### CONTROL RED
+list.id_control_red=list("1-R-180",
+"2-R-180",
+"3-R-180")
+
+my_meth_control_red=processBismarkAln(location=list.bam_control_red,
+                sample.id=list.id_control_red,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_control_red",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,1,2))
+
+getMethylationStats(my_meth_control_red[[2]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_red[[2]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_red[[2]],plot=TRUE,both.strands=FALSE)
+
+save(my_meth_control_red, file = "my_meth_control_red.rda")
+print(my_meth_control_red[1]]@dbpath)
+message ("my_meth_control_red.done")
+
+
+
+
+
+###### CONTROL YELLOW
+list.bam_control_yellow=list("Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam",
+"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted.bam")
+
+###### CONTROL YELLOW
+list.id_control_yellow=list("1-J-2",
+"2-J-2",
+"3-J-2")
+
+my_meth_control_yellow=processBismarkAln(location=list.bam_control_yellow,
+                sample.id=list.id_control_yellow,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_control_yellow",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,1,2))
+			 
+getMethylationStats(my_meth_control_yellow[[2]],plot=FALSE,both.strands=FALSE)
+getMethylationStats(my_meth_control_yellow[[2]],plot=TRUE,both.strands=FALSE)
+getCoverageStats(my_meth_control_yellow[[2]],plot=TRUE,both.strands=FALSE)
+			 
+
+save(my_meth_control_yellow, file = "my_meth_control_yellow.rda")
+print(my_meth_control_yellow[1]]@dbpath)
+message ("my_meth_control_yellow.done")
+
+
+
 
 ###################################
 ### FILTER THE METHYLATION CALL ###
@@ -57,7 +155,7 @@ getCoverageStats(myallmeth[[2]],plot=TRUE,both.strands=FALSE)
 #load("R.objects/myallmeth.rda")
 
 # with normalization #
-normalized.myallmeth=normalizeCoverage(myallmeth)
+normalized.myallmeth=normalizeCoverage(my_meth_control_yellow)
 message ("normalize.done")
 
 # Filtering samples based on read coverage #
