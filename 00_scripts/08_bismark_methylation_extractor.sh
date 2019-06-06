@@ -14,7 +14,7 @@ NCPU=4
 cd $OUTPUT
 $BISMARK_ENV
 
-for FILE in $(ls $BAM/*deduplicated.bam_sorted.bam)
+for FILE in $(ls $BAM/*deduplicated.bam)
 
 do
 	
