@@ -302,7 +302,176 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 
 
 ###### ALL TREATMENT CLEAN COLOR AGAINST COLOR
-list.bam_treatment_all_treatment_color_against_color=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#list.bam_treatment_all_treatment_color_against_color=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
+#
+####### ALL TREATMENT CLEAN COLOR AGAINST COLOR
+#list.id_treatment_all_treatment_color_against_color=list("1-R-183",
+#"2-R-183",
+#"3-R-183",
+#"1-J-7",
+#"2-J-7",
+#"3-J-7",
+#"1-V-620",
+#"2-V-620",
+#"3-V-620")
+#
+#my_meth_treatment_all_treatment_color_against_color=processBismarkAln(location=list.bam_treatment_all_treatment_color_against_color,
+#                sample.id=list.id_treatment_all_treatment_color_against_color,
+#                assembly="sspace.final.scaffolds.fasta",
+#                save.folder="methylation_call_treatment_all_treatment_color_against_color_clean",
+#                save.context=c("CpG"),
+#                read.context="CpG",
+#                mincov=10,
+#                treatment=c(0,0,0,1,1,1,2,2,2))
+#
+## Descriptive statistics on samples
+#print("my_meth_treatment_all_treatment_color_against_color[[1]]")
+#my_meth_treatment_all_treatment_color_against_color[[1]]
+#print("my_meth_treatment_all_treatment_color_against_color[[2]]")
+#my_meth_treatment_all_treatment_color_against_color[[2]]
+#print("my_meth_treatment_all_treatment_color_against_color[[3]]")
+#my_meth_treatment_all_treatment_color_against_color[[3]]
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=TRUE,both.strands=FALSE)
+#
+#save(my_meth_treatment_all_treatment_color_against_color, file = "my_meth_treatment_all_treatment_color_against_color_clean.rda")
+##print(my_meth_treatment_all_treatment_color_against_color[[1]]@dbpath)
+#message("my_meth_treatment_all_treatment_color_against_color_clean.done")
+#
+#
+####### ALL TREATMENT CLEAN TIME AGAINST TIME
+#list.bam_treatment_all_treatment_time_against_time=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
+#
+####### ALL TREATMENT CLEAN TIME AGAINST TIME
+#list.id_treatment_all_treatment_time_against_time=list("1-R-183",
+#"2-R-183",
+#"3-R-183",
+#"1-J-7",
+#"2-J-7",
+#"3-J-7",
+#"1-V-620",
+#"2-V-620",
+#"3-V-620")
+#
+#my_meth_treatment_all_treatment_time_against_time=processBismarkAln(location=list.bam_treatment_all_treatment_time_against_time,
+#                sample.id=list.id_treatment_all_treatment_time_against_time,
+#                assembly="sspace.final.scaffolds.fasta",
+#                save.folder="methylation_call_treatment_all_treatment_time_against_time_clean",
+#                save.context=c("CpG"),
+#                read.context="CpG",
+#                mincov=10,
+#                treatment=c(0,1,2,0,1,2,0,1,2))
+#
+## Descriptive statistics on samples
+#print("my_meth_treatment_all_treatment_time_against_time[[1]]")
+#my_meth_treatment_all_treatment_time_against_time[[1]]
+#print("my_meth_treatment_all_treatment_time_against_time[[2]]")
+#my_meth_treatment_all_treatment_time_against_time[[2]]
+#print("my_meth_treatment_all_treatment_time_against_time[[3]]")
+#my_meth_treatment_all_treatment_time_against_time[[3]]
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=TRUE,both.strands=FALSE)
+#
+#save(my_meth_treatment_all_treatment_time_against_time, file = "my_meth_treatment_all_treatment_time_against_time_clean.rda")
+##print(my_meth_treatment_all_treatment_time_against_time[[1]]@dbpath)
+#message ("my_meth_treatment_all_treatment_time_against_time_clean.done")
+#
+#
+#
+#
+#
+#
+#
+####### ALL TREATMENT CLEAN DEPTH AGAINST DEPTH
+#list.bam_treatment_all_treatment_depth_against_depth=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
+#
+####### ALL TREATMENT CLEAN DEPTH AGAINST DEPTH
+#list.id_treatment_all_treatment_depth_against_depth=list("1-R-183",
+#"2-R-183",
+#"3-R-183",
+#"1-J-7",
+#"2-J-7",
+#"3-J-7",
+#"1-V-620",
+#"2-V-620",
+#"3-V-620")
+#
+#my_meth_treatment_all_treatment_depth_against_depth=processBismarkAln(location=list.bam_treatment_all_treatment_depth_against_depth,
+#                sample.id=list.id_treatment_all_treatment_depth_against_depth,
+#                assembly="sspace.final.scaffolds.fasta",
+#                save.folder="methylation_call_treatment_all_treatment_depth_against_depth_clean",
+#                save.context=c("CpG"),
+#                read.context="CpG",
+#                mincov=10,
+#                treatment=c(0,1,0,0,1,0,0,1,0))
+#
+## Descriptive statistics on samples
+#print("my_meth_treatment_all_treatment_depth_against_depth[[1]]")
+#my_meth_treatment_all_treatment_depth_against_depth[[1]]
+#print("my_meth_treatment_all_treatment_depth_against_depth[[2]]")
+#my_meth_treatment_all_treatment_depth_against_depth[[2]]
+#print("my_meth_treatment_all_treatment_depth_against_depth[[3]]")
+#my_meth_treatment_all_treatment_depth_against_depth[[3]]
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=TRUE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=FALSE,both.strands=FALSE)
+#getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=TRUE,both.strands=FALSE)
+#getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=TRUE,both.strands=FALSE)
+#
+#save(my_meth_treatment_all_treatment_depth_against_depth, file = "my_meth_treatment_all_treatment_depth_against_depth_clean.rda")
+##print(my_meth_treatment_all_treatment_depth_against_depth[[1]]@dbpath)
+#message ("my_meth_treatment_all_treatment_depth_against_depth_clean.done")
+
+
+
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+
+###### ALL ALL ALL 
+list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
 "Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
 "Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
 "Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
@@ -310,10 +479,19 @@ list.bam_treatment_all_treatment_color_against_color=list("Index_2.1-R-183_R1_pa
 "Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
 "Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
 "Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
+"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
 
-###### ALL TREATMENT CLEAN COLOR AGAINST COLOR
-list.id_treatment_all_treatment_color_against_color=list("1-R-183",
+###### ALL ALL ALL 
+list.id_all_together=list("1-R-183",
 "2-R-183",
 "3-R-183",
 "1-J-7",
@@ -321,148 +499,29 @@ list.id_treatment_all_treatment_color_against_color=list("1-R-183",
 "3-J-7",
 "1-V-620",
 "2-V-620",
-"3-V-620")
+"3-V-620",
+"1-R-180",
+"2-R-180",
+"3-R-180",
+"1-J-2",
+"2-J-2",
+"3-J-2",
+"1-V-613",
+"2-V-613",
+"3-V-613")
 
-my_meth_treatment_all_treatment_color_against_color=processBismarkAln(location=list.bam_treatment_all_treatment_color_against_color,
-                sample.id=list.id_treatment_all_treatment_color_against_color,
+my_meth_all_together=processBismarkAln(location=list.bam_all_together,
+                sample.id=list.id_all_together,
                 assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call_treatment_all_treatment_color_against_color_clean",
+                save.folder="methylation_call_all_together_clean",
                 save.context=c("CpG"),
                 read.context="CpG",
                 mincov=10,
-                treatment=c(0,0,0,1,1,1,2,2,2))
+                treatment=c(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17))
 
-# Descriptive statistics on samples
-print("my_meth_treatment_all_treatment_color_against_color[[1]]")
-my_meth_treatment_all_treatment_color_against_color[[1]]
-print("my_meth_treatment_all_treatment_color_against_color[[2]]")
-my_meth_treatment_all_treatment_color_against_color[[2]]
-print("my_meth_treatment_all_treatment_color_against_color[[3]]")
-my_meth_treatment_all_treatment_color_against_color[[3]]
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[1]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[2]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_color_against_color[[3]],plot=TRUE,both.strands=FALSE)
-
-save(my_meth_treatment_all_treatment_color_against_color, file = "my_meth_treatment_all_treatment_color_against_color_clean.rda")
-#print(my_meth_treatment_all_treatment_color_against_color[[1]]@dbpath)
-message("my_meth_treatment_all_treatment_color_against_color_clean.done")
-
-
-###### ALL TREATMENT CLEAN TIME AGAINST TIME
-list.bam_treatment_all_treatment_time_against_time=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
-
-###### ALL TREATMENT CLEAN TIME AGAINST TIME
-list.id_treatment_all_treatment_time_against_time=list("1-R-183",
-"2-R-183",
-"3-R-183",
-"1-J-7",
-"2-J-7",
-"3-J-7",
-"1-V-620",
-"2-V-620",
-"3-V-620")
-
-my_meth_treatment_all_treatment_time_against_time=processBismarkAln(location=list.bam_treatment_all_treatment_time_against_time,
-                sample.id=list.id_treatment_all_treatment_time_against_time,
-                assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call_treatment_all_treatment_time_against_time_clean",
-                save.context=c("CpG"),
-                read.context="CpG",
-                mincov=10,
-                treatment=c(0,1,2,0,1,2,0,1,2))
-
-# Descriptive statistics on samples
-print("my_meth_treatment_all_treatment_time_against_time[[1]]")
-my_meth_treatment_all_treatment_time_against_time[[1]]
-print("my_meth_treatment_all_treatment_time_against_time[[2]]")
-my_meth_treatment_all_treatment_time_against_time[[2]]
-print("my_meth_treatment_all_treatment_time_against_time[[3]]")
-my_meth_treatment_all_treatment_time_against_time[[3]]
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[1]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[2]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_time_against_time[[3]],plot=TRUE,both.strands=FALSE)
-
-save(my_meth_treatment_all_treatment_time_against_time, file = "my_meth_treatment_all_treatment_time_against_time_clean.rda")
-#print(my_meth_treatment_all_treatment_time_against_time[[1]]@dbpath)
-message ("my_meth_treatment_all_treatment_time_against_time_clean.done")
-
-
-
-
-
-
-
-###### ALL TREATMENT CLEAN DEPTH AGAINST DEPTH
-list.bam_treatment_all_treatment_depth_against_depth=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam")
-
-###### ALL TREATMENT CLEAN DEPTH AGAINST DEPTH
-list.id_treatment_all_treatment_depth_against_depth=list("1-R-183",
-"2-R-183",
-"3-R-183",
-"1-J-7",
-"2-J-7",
-"3-J-7",
-"1-V-620",
-"2-V-620",
-"3-V-620")
-
-my_meth_treatment_all_treatment_depth_against_depth=processBismarkAln(location=list.bam_treatment_all_treatment_depth_against_depth,
-                sample.id=list.id_treatment_all_treatment_depth_against_depth,
-                assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call_treatment_all_treatment_depth_against_depth_clean",
-                save.context=c("CpG"),
-                read.context="CpG",
-                mincov=10,
-                treatment=c(0,1,0,0,1,0,0,1,0))
-
-# Descriptive statistics on samples
-print("my_meth_treatment_all_treatment_depth_against_depth[[1]]")
-my_meth_treatment_all_treatment_depth_against_depth[[1]]
-print("my_meth_treatment_all_treatment_depth_against_depth[[2]]")
-my_meth_treatment_all_treatment_depth_against_depth[[2]]
-print("my_meth_treatment_all_treatment_depth_against_depth[[3]]")
-my_meth_treatment_all_treatment_depth_against_depth[[3]]
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[1]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[2]],plot=TRUE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=FALSE,both.strands=FALSE)
-getMethylationStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=TRUE,both.strands=FALSE)
-getCoverageStats(my_meth_treatment_all_treatment_depth_against_depth[[3]],plot=TRUE,both.strands=FALSE)
-
-save(my_meth_treatment_all_treatment_depth_against_depth, file = "my_meth_treatment_all_treatment_depth_against_depth_clean.rda")
-#print(my_meth_treatment_all_treatment_depth_against_depth[[1]]@dbpath)
-message ("my_meth_treatment_all_treatment_depth_against_depth_clean.done")
+save(my_meth_all_together, file = "my_meth_all_together_clean.rda")
+#print(my_meth_all_together[[1]]@dbpath)
+message ("my_meth_all_together_clean.done")
 
 ####################################
 #### FILTER THE METHYLATION CALL ###
