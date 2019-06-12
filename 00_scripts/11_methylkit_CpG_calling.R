@@ -517,7 +517,7 @@ my_meth_all_together=processBismarkAln(location=list.bam_all_together,
                 save.context=c("CpG"),
                 read.context="CpG",
                 mincov=10,
-                treatment=c(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17))
+                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
 
 save(my_meth_all_together, file = "my_meth_all_together_clean.rda")
 #print(my_meth_all_together[[1]]@dbpath)
