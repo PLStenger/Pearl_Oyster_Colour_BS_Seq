@@ -9,8 +9,6 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 ### COMPARATIVE ANALYSIS ###
 
 
-save(my_meth_treatment_all_treatment_color_against_color, file = "my_meth_treatment_all_treatment_color_against_color_clean.rda")
-
 
 ## Per Base ##
 # with normalization #
