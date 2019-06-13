@@ -105,7 +105,7 @@ treatement_yellow_2_3=reorganize(my_meth_treatment_all_treatment_color_against_c
 
 
 # # get samples named "test1" and "ctrl2" from meth and create a new methylBase object
-meth2 =reorganize(mAllmeth.norm,sample.ids=c("test1","ctrl2"),treatment=c(1,0) )
+meth2 =reorganize(Allmeth.norm,sample.ids=c("test1","ctrl2"),treatment=c(1,0) )
 
 Allmeth.norm_treatement_red_1_2=reorganize(Allmeth.norm, 
 	sample.ids=c("1-R-183","2-R-183"),
