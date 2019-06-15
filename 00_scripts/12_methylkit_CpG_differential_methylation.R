@@ -2358,31 +2358,31 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 ################################################ CTRL vs CTRL ################################################
 ##############################################################################################################
 #
-#all_control_color_time_1_against_control_color_time_2=reorganize(my_meth_all_together, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "2-R-180", "2-J-2", "2-V-613"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "2-R-180", "2-J-2", "2-V-613"),
-#treatment=c(0,0,0,1,1,1))
-#
-#all_control_color_time_2_against_control_color_time_3=reorganize(my_meth_all_together, 
-#	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "3-R-180", "3-V-620", "3-V-613"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_time_2_against_control_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "3-R-180", "3-V-620", "3-V-613"),
-#treatment=c(0,0,0,1,1,1))
-#
-#all_control_color_time_1_against_control_color_time_3=reorganize(my_meth_all_together, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613","3-R-180", "3-V-620", "3-V-613"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613","3-R-180", "3-V-620", "3-V-613"),
-#treatment=c(0,0,0,1,1,1))
-#
-#
+all_control_color_time_1_against_control_color_time_2=reorganize(my_meth_all_together, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "2-R-180", "2-J-2", "2-V-613"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "2-R-180", "2-J-2", "2-V-613"),
+treatment=c(0,0,0,1,1,1))
+
+all_control_color_time_2_against_control_color_time_3=reorganize(my_meth_all_together, 
+	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "3-R-180", "3-V-620", "3-V-613"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_time_2_against_control_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "3-R-180", "3-V-620", "3-V-613"),
+treatment=c(0,0,0,1,1,1))
+
+all_control_color_time_1_against_control_color_time_3=reorganize(my_meth_all_together, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613","3-R-180", "3-V-620", "3-V-613"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613","3-R-180", "3-V-620", "3-V-613"),
+treatment=c(0,0,0,1,1,1))
+
+
 #############################################################################################################
 ######################################## DIFFERENTIAL METHYLATION ANALYSIS ##################################
 #############################################################################################################
