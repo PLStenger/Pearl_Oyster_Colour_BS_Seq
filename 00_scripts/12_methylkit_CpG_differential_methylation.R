@@ -1395,7 +1395,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_red_1_treament_red_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_1, mc.cores = 4)
 #save(Diffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.rda")
-#write.table(DDiffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_red_1_treament_red_1 done")
 #
 #Diffmeth.norm_control_red_1_treament_red_1.interest=getMethylDiff(Diffmeth.norm_control_red_1_treament_red_1, difference = 25, qvalue = 0.01)
@@ -1417,7 +1417,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_1_treament_green_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_1, mc.cores = 4)
 #save(Diffmeth.norm_control_green_1_treament_green_1, file = "Diffmeth.norm_control_green_1_treament_green_1.rda")
-#write.table(DDiffmeth.norm_control_green_1_treament_green_1, file = "Diffmeth.norm_control_green_1_treament_green_1.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_1_treament_green_1, file = "Diffmeth.norm_control_green_1_treament_green_1.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_1_treament_green_1 done")
 #
 #Diffmeth.norm_control_green_1_treament_green_1.interest=getMethylDiff(Diffmeth.norm_control_green_1_treament_green_1, difference = 25, qvalue = 0.01)
@@ -1438,7 +1438,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_1_treament_green_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_2, mc.cores = 4)
 #save(Diffmeth.norm_control_green_1_treament_green_2, file = "Diffmeth.norm_control_green_1_treament_green_2.rda")
-#write.table(DDiffmeth.norm_control_green_1_treament_green_2, file = "Diffmeth.norm_control_green_1_treament_green_2.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_1_treament_green_2, file = "Diffmeth.norm_control_green_1_treament_green_2.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_1_treament_green_2 done")
 #
 #Diffmeth.norm_control_green_1_treament_green_2.interest=getMethylDiff(Diffmeth.norm_control_green_1_treament_green_2, difference = 25, qvalue = 0.01)
@@ -1459,7 +1459,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_1_treament_green_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_3, mc.cores = 4)
 #save(Diffmeth.norm_control_green_1_treament_green_3, file = "Diffmeth.norm_control_green_1_treament_green_3.rda")
-#write.table(DDiffmeth.norm_control_green_1_treament_green_3, file = "Diffmeth.norm_control_green_1_treament_green_3.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_1_treament_green_3, file = "Diffmeth.norm_control_green_1_treament_green_3.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_1_treament_green_3 done")
 #
 #Diffmeth.norm_control_green_1_treament_green_3.interest=getMethylDiff(Diffmeth.norm_control_green_1_treament_green_3, difference = 25, qvalue = 0.01)
@@ -1480,7 +1480,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_2_treament_green_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_1, mc.cores = 4)
 #save(Diffmeth.norm_control_green_2_treament_green_1, file = "Diffmeth.norm_control_green_2_treament_green_1.rda")
-#write.table(DDiffmeth.norm_control_green_2_treament_green_1, file = "Diffmeth.norm_control_green_2_treament_green_1.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_2_treament_green_1, file = "Diffmeth.norm_control_green_2_treament_green_1.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_2_treament_green_1 done")
 #
 #Diffmeth.norm_control_green_2_treament_green_1.interest=getMethylDiff(Diffmeth.norm_control_green_2_treament_green_1, difference = 25, qvalue = 0.01)
@@ -1501,7 +1501,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_2_treament_green_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_2, mc.cores = 4)
 #save(Diffmeth.norm_control_green_2_treament_green_2, file = "Diffmeth.norm_control_green_2_treament_green_2.rda")
-#write.table(DDiffmeth.norm_control_green_2_treament_green_2, file = "Diffmeth.norm_control_green_2_treament_green_2.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_2_treament_green_2, file = "Diffmeth.norm_control_green_2_treament_green_2.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_2_treament_green_2 done")
 #
 #Diffmeth.norm_control_green_2_treament_green_2.interest=getMethylDiff(Diffmeth.norm_control_green_2_treament_green_2, difference = 25, qvalue = 0.01)
@@ -1522,7 +1522,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_2_treament_green_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_3, mc.cores = 4)
 #save(Diffmeth.norm_control_green_2_treament_green_3, file = "Diffmeth.norm_control_green_2_treament_green_3.rda")
-#write.table(DDiffmeth.norm_control_green_2_treament_green_3, file = "Diffmeth.norm_control_green_2_treament_green_3.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_2_treament_green_3, file = "Diffmeth.norm_control_green_2_treament_green_3.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_2_treament_green_3 done")
 #
 #Diffmeth.norm_control_green_2_treament_green_3.interest=getMethylDiff(Diffmeth.norm_control_green_2_treament_green_3, difference = 25, qvalue = 0.01)
@@ -1543,7 +1543,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_3_treament_green_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_1, mc.cores = 4)
 #save(Diffmeth.norm_control_green_3_treament_green_1, file = "Diffmeth.norm_control_green_3_treament_green_1.rda")
-#write.table(DDiffmeth.norm_control_green_3_treament_green_1, file = "Diffmeth.norm_control_green_3_treament_green_1.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_3_treament_green_1, file = "Diffmeth.norm_control_green_3_treament_green_1.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_3_treament_green_1 done")
 #
 #Diffmeth.norm_control_green_3_treament_green_1.interest=getMethylDiff(Diffmeth.norm_control_green_3_treament_green_1, difference = 25, qvalue = 0.01)
@@ -1564,7 +1564,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_3_treament_green_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_2, mc.cores = 4)
 #save(Diffmeth.norm_control_green_3_treament_green_2, file = "Diffmeth.norm_control_green_3_treament_green_2.rda")
-#write.table(DDiffmeth.norm_control_green_3_treament_green_2, file = "Diffmeth.norm_control_green_3_treament_green_2.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_3_treament_green_2, file = "Diffmeth.norm_control_green_3_treament_green_2.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_3_treament_green_2 done")
 #
 #Diffmeth.norm_control_green_3_treament_green_2.interest=getMethylDiff(Diffmeth.norm_control_green_3_treament_green_2, difference = 25, qvalue = 0.01)
@@ -1585,7 +1585,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #
 #Diffmeth.norm_control_green_3_treament_green_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_3, mc.cores = 4)
 #save(Diffmeth.norm_control_green_3_treament_green_3, file = "Diffmeth.norm_control_green_3_treament_green_3.rda")
-#write.table(DDiffmeth.norm_control_green_3_treament_green_3, file = "Diffmeth.norm_control_green_3_treament_green_3.txt", sep = "\t", quote = FALSE)
+#write.table(Diffmeth.norm_control_green_3_treament_green_3, file = "Diffmeth.norm_control_green_3_treament_green_3.txt", sep = "\t", quote = FALSE)
 #message("Diffmeth.norm_control_green_3_treament_green_3 done")
 #
 #Diffmeth.norm_control_green_3_treament_green_3.interest=getMethylDiff(Diffmeth.norm_control_green_3_treament_green_3, difference = 25, qvalue = 0.01)
@@ -1606,7 +1606,7 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 
 Diffmeth.norm_control_red_1_treament_red_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_1, mc.cores = 4)
 save(Diffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.rda")
-write.table(DDiffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_1_treament_red_1, file = "Diffmeth.norm_control_red_1_treament_red_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_1_treament_red_1 done")
 
 Diffmeth.norm_control_red_1_treament_red_1.interest=getMethylDiff(Diffmeth.norm_control_red_1_treament_red_1, difference = 25, qvalue = 0.01)
@@ -1627,7 +1627,7 @@ write.table(Diffmeth.norm_control_red_1_treament_red_1.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_1_treament_red_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_2, mc.cores = 4)
 save(Diffmeth.norm_control_red_1_treament_red_2, file = "Diffmeth.norm_control_red_1_treament_red_2.rda")
-write.table(DDiffmeth.norm_control_red_1_treament_red_2, file = "Diffmeth.norm_control_red_1_treament_red_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_1_treament_red_2, file = "Diffmeth.norm_control_red_1_treament_red_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_1_treament_red_2 done")
 
 Diffmeth.norm_control_red_1_treament_red_2.interest=getMethylDiff(Diffmeth.norm_control_red_1_treament_red_2, difference = 25, qvalue = 0.01)
@@ -1648,7 +1648,7 @@ write.table(Diffmeth.norm_control_red_1_treament_red_2.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_1_treament_red_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_3, mc.cores = 4)
 save(Diffmeth.norm_control_red_1_treament_red_3, file = "Diffmeth.norm_control_red_1_treament_red_3.rda")
-write.table(DDiffmeth.norm_control_red_1_treament_red_3, file = "Diffmeth.norm_control_red_1_treament_red_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_1_treament_red_3, file = "Diffmeth.norm_control_red_1_treament_red_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_1_treament_red_3 done")
 
 Diffmeth.norm_control_red_1_treament_red_3.interest=getMethylDiff(Diffmeth.norm_control_red_1_treament_red_3, difference = 25, qvalue = 0.01)
@@ -1669,7 +1669,7 @@ write.table(Diffmeth.norm_control_red_1_treament_red_3.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_2_treament_red_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_1, mc.cores = 4)
 save(Diffmeth.norm_control_red_2_treament_red_1, file = "Diffmeth.norm_control_red_2_treament_red_1.rda")
-write.table(DDiffmeth.norm_control_red_2_treament_red_1, file = "Diffmeth.norm_control_red_2_treament_red_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_2_treament_red_1, file = "Diffmeth.norm_control_red_2_treament_red_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_2_treament_red_1 done")
 
 Diffmeth.norm_control_red_2_treament_red_1.interest=getMethylDiff(Diffmeth.norm_control_red_2_treament_red_1, difference = 25, qvalue = 0.01)
@@ -1690,7 +1690,7 @@ write.table(Diffmeth.norm_control_red_2_treament_red_1.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_2_treament_red_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_2, mc.cores = 4)
 save(Diffmeth.norm_control_red_2_treament_red_2, file = "Diffmeth.norm_control_red_2_treament_red_2.rda")
-write.table(DDiffmeth.norm_control_red_2_treament_red_2, file = "Diffmeth.norm_control_red_2_treament_red_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_2_treament_red_2, file = "Diffmeth.norm_control_red_2_treament_red_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_2_treament_red_2 done")
 
 Diffmeth.norm_control_red_2_treament_red_2.interest=getMethylDiff(Diffmeth.norm_control_red_2_treament_red_2, difference = 25, qvalue = 0.01)
@@ -1711,7 +1711,7 @@ write.table(Diffmeth.norm_control_red_2_treament_red_2.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_2_treament_red_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_3, mc.cores = 4)
 save(Diffmeth.norm_control_red_2_treament_red_3, file = "Diffmeth.norm_control_red_2_treament_red_3.rda")
-write.table(DDiffmeth.norm_control_red_2_treament_red_3, file = "Diffmeth.norm_control_red_2_treament_red_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_2_treament_red_3, file = "Diffmeth.norm_control_red_2_treament_red_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_2_treament_red_3 done")
 
 Diffmeth.norm_control_red_2_treament_red_3.interest=getMethylDiff(Diffmeth.norm_control_red_2_treament_red_3, difference = 25, qvalue = 0.01)
@@ -1732,7 +1732,7 @@ write.table(Diffmeth.norm_control_red_2_treament_red_3.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_3_treament_red_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_1, mc.cores = 4)
 save(Diffmeth.norm_control_red_3_treament_red_1, file = "Diffmeth.norm_control_red_3_treament_red_1.rda")
-write.table(DDiffmeth.norm_control_red_3_treament_red_1, file = "Diffmeth.norm_control_red_3_treament_red_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_3_treament_red_1, file = "Diffmeth.norm_control_red_3_treament_red_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_3_treament_red_1 done")
 
 Diffmeth.norm_control_red_3_treament_red_1.interest=getMethylDiff(Diffmeth.norm_control_red_3_treament_red_1, difference = 25, qvalue = 0.01)
@@ -1753,7 +1753,7 @@ write.table(Diffmeth.norm_control_red_3_treament_red_1.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_3_treament_red_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_2, mc.cores = 4)
 save(Diffmeth.norm_control_red_3_treament_red_2, file = "Diffmeth.norm_control_red_3_treament_red_2.rda")
-write.table(DDiffmeth.norm_control_red_3_treament_red_2, file = "Diffmeth.norm_control_red_3_treament_red_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_3_treament_red_2, file = "Diffmeth.norm_control_red_3_treament_red_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_3_treament_red_2 done")
 
 Diffmeth.norm_control_red_3_treament_red_2.interest=getMethylDiff(Diffmeth.norm_control_red_3_treament_red_2, difference = 25, qvalue = 0.01)
@@ -1774,7 +1774,7 @@ write.table(Diffmeth.norm_control_red_3_treament_red_2.interest.hypo, file = "Di
 
 Diffmeth.norm_control_red_3_treament_red_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_3, mc.cores = 4)
 save(Diffmeth.norm_control_red_3_treament_red_3, file = "Diffmeth.norm_control_red_3_treament_red_3.rda")
-write.table(DDiffmeth.norm_control_red_3_treament_red_3, file = "Diffmeth.norm_control_red_3_treament_red_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_red_3_treament_red_3, file = "Diffmeth.norm_control_red_3_treament_red_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_red_3_treament_red_3 done")
 
 Diffmeth.norm_control_red_3_treament_red_3.interest=getMethylDiff(Diffmeth.norm_control_red_3_treament_red_3, difference = 25, qvalue = 0.01)
@@ -1795,7 +1795,7 @@ write.table(Diffmeth.norm_control_red_3_treament_red_3.interest.hypo, file = "Di
 
 Diffmeth.norm_control_yellow_1_treament_yellow_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_1, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_1_treament_yellow_1, file = "Diffmeth.norm_control_yellow_1_treament_yellow_1.rda")
-write.table(DDiffmeth.norm_control_yellow_1_treament_yellow_1, file = "Diffmeth.norm_control_yellow_1_treament_yellow_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_1_treament_yellow_1, file = "Diffmeth.norm_control_yellow_1_treament_yellow_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_1_treament_yellow_1 done")
 
 Diffmeth.norm_control_yellow_1_treament_yellow_1.interest=getMethylDiff(Diffmeth.norm_control_yellow_1_treament_yellow_1, difference = 25, qvalue = 0.01)
@@ -1816,7 +1816,7 @@ write.table(Diffmeth.norm_control_yellow_1_treament_yellow_1.interest.hypo, file
 
 Diffmeth.norm_control_yellow_1_treament_yellow_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_2, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_1_treament_yellow_2, file = "Diffmeth.norm_control_yellow_1_treament_yellow_2.rda")
-write.table(DDiffmeth.norm_control_yellow_1_treament_yellow_2, file = "Diffmeth.norm_control_yellow_1_treament_yellow_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_1_treament_yellow_2, file = "Diffmeth.norm_control_yellow_1_treament_yellow_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_1_treament_yellow_2 done")
 
 Diffmeth.norm_control_yellow_1_treament_yellow_2.interest=getMethylDiff(Diffmeth.norm_control_yellow_1_treament_yellow_2, difference = 25, qvalue = 0.01)
@@ -1837,7 +1837,7 @@ write.table(Diffmeth.norm_control_yellow_1_treament_yellow_2.interest.hypo, file
 
 Diffmeth.norm_control_yellow_1_treament_yellow_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_3, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_1_treament_yellow_3, file = "Diffmeth.norm_control_yellow_1_treament_yellow_3.rda")
-write.table(DDiffmeth.norm_control_yellow_1_treament_yellow_3, file = "Diffmeth.norm_control_yellow_1_treament_yellow_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_1_treament_yellow_3, file = "Diffmeth.norm_control_yellow_1_treament_yellow_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_1_treament_yellow_3 done")
 
 Diffmeth.norm_control_yellow_1_treament_yellow_3.interest=getMethylDiff(Diffmeth.norm_control_yellow_1_treament_yellow_3, difference = 25, qvalue = 0.01)
@@ -1858,7 +1858,7 @@ write.table(Diffmeth.norm_control_yellow_1_treament_yellow_3.interest.hypo, file
 
 Diffmeth.norm_control_yellow_2_treament_yellow_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_1, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_2_treament_yellow_1, file = "Diffmeth.norm_control_yellow_2_treament_yellow_1.rda")
-write.table(DDiffmeth.norm_control_yellow_2_treament_yellow_1, file = "Diffmeth.norm_control_yellow_2_treament_yellow_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_2_treament_yellow_1, file = "Diffmeth.norm_control_yellow_2_treament_yellow_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_2_treament_yellow_1 done")
 
 Diffmeth.norm_control_yellow_2_treament_yellow_1.interest=getMethylDiff(Diffmeth.norm_control_yellow_2_treament_yellow_1, difference = 25, qvalue = 0.01)
@@ -1879,7 +1879,7 @@ write.table(Diffmeth.norm_control_yellow_2_treament_yellow_1.interest.hypo, file
 
 Diffmeth.norm_control_yellow_2_treament_yellow_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_2, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_2_treament_yellow_2, file = "Diffmeth.norm_control_yellow_2_treament_yellow_2.rda")
-write.table(DDiffmeth.norm_control_yellow_2_treament_yellow_2, file = "Diffmeth.norm_control_yellow_2_treament_yellow_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_2_treament_yellow_2, file = "Diffmeth.norm_control_yellow_2_treament_yellow_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_2_treament_yellow_2 done")
 
 Diffmeth.norm_control_yellow_2_treament_yellow_2.interest=getMethylDiff(Diffmeth.norm_control_yellow_2_treament_yellow_2, difference = 25, qvalue = 0.01)
@@ -1900,7 +1900,7 @@ write.table(Diffmeth.norm_control_yellow_2_treament_yellow_2.interest.hypo, file
 
 Diffmeth.norm_control_yellow_2_treament_yellow_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_3, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_2_treament_yellow_3, file = "Diffmeth.norm_control_yellow_2_treament_yellow_3.rda")
-write.table(DDiffmeth.norm_control_yellow_2_treament_yellow_3, file = "Diffmeth.norm_control_yellow_2_treament_yellow_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_2_treament_yellow_3, file = "Diffmeth.norm_control_yellow_2_treament_yellow_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_2_treament_yellow_3 done")
 
 Diffmeth.norm_control_yellow_2_treament_yellow_3.interest=getMethylDiff(Diffmeth.norm_control_yellow_2_treament_yellow_3, difference = 25, qvalue = 0.01)
@@ -1921,7 +1921,7 @@ write.table(Diffmeth.norm_control_yellow_2_treament_yellow_3.interest.hypo, file
 
 Diffmeth.norm_control_yellow_3_treament_yellow_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_1, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_3_treament_yellow_1, file = "Diffmeth.norm_control_yellow_3_treament_yellow_1.rda")
-write.table(DDiffmeth.norm_control_yellow_3_treament_yellow_1, file = "Diffmeth.norm_control_yellow_3_treament_yellow_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_3_treament_yellow_1, file = "Diffmeth.norm_control_yellow_3_treament_yellow_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_3_treament_yellow_1 done")
 
 Diffmeth.norm_control_yellow_3_treament_yellow_1.interest=getMethylDiff(Diffmeth.norm_control_yellow_3_treament_yellow_1, difference = 25, qvalue = 0.01)
@@ -1942,7 +1942,7 @@ write.table(Diffmeth.norm_control_yellow_3_treament_yellow_1.interest.hypo, file
 
 Diffmeth.norm_control_yellow_3_treament_yellow_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_2, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_3_treament_yellow_2, file = "Diffmeth.norm_control_yellow_3_treament_yellow_2.rda")
-write.table(DDiffmeth.norm_control_yellow_3_treament_yellow_2, file = "Diffmeth.norm_control_yellow_3_treament_yellow_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_3_treament_yellow_2, file = "Diffmeth.norm_control_yellow_3_treament_yellow_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_3_treament_yellow_2 done")
 
 Diffmeth.norm_control_yellow_3_treament_yellow_2.interest=getMethylDiff(Diffmeth.norm_control_yellow_3_treament_yellow_2, difference = 25, qvalue = 0.01)
@@ -1963,7 +1963,7 @@ write.table(Diffmeth.norm_control_yellow_3_treament_yellow_2.interest.hypo, file
 
 Diffmeth.norm_control_yellow_3_treament_yellow_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3, mc.cores = 4)
 save(Diffmeth.norm_control_yellow_3_treament_yellow_3, file = "Diffmeth.norm_control_yellow_3_treament_yellow_3.rda")
-write.table(DDiffmeth.norm_control_yellow_3_treament_yellow_3, file = "Diffmeth.norm_control_yellow_3_treament_yellow_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_control_yellow_3_treament_yellow_3, file = "Diffmeth.norm_control_yellow_3_treament_yellow_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_control_yellow_3_treament_yellow_3 done")
 
 Diffmeth.norm_control_yellow_3_treament_yellow_3.interest=getMethylDiff(Diffmeth.norm_control_yellow_3_treament_yellow_3, difference = 25, qvalue = 0.01)
@@ -2024,7 +2024,7 @@ treatment=c(0,0,0,1,1,1))
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.rda")
-write.table(DDiffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 done")
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest=getMethylDiff(Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01)
@@ -2043,7 +2043,7 @@ write.table(Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.i
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.rda")
-write.table(DDiffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 done")
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest=getMethylDiff(Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01)
@@ -2063,7 +2063,7 @@ write.table(Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.i
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.rda")
-write.table(DDiffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 done")
 
 Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest=getMethylDiff(Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01)
@@ -2118,7 +2118,7 @@ treatment=c(0,0,0,1,1,1))
 
 Diffmeth.norm_all_control_color_time_1_against_control_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_2, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_time_1_against_control_color_time_2, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_2.rda")
-write.table(DDiffmeth.norm_all_control_color_time_1_against_control_color_time_2, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_time_1_against_control_color_time_2, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_time_1_against_control_color_time_2 done")
 
 Diffmeth.norm_all_control_color_time_1_against_control_color_time_2.interest=getMethylDiff(Diffmeth.norm_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.01)
@@ -2136,7 +2136,7 @@ write.table(Diffmeth.norm_all_control_color_time_1_against_control_color_time_2.
 
 Diffmeth.norm_all_control_color_time_2_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_2_against_control_color_time_3, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_time_2_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_2_against_control_color_time_3.rda")
-write.table(DDiffmeth.norm_all_control_color_time_2_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_2_against_control_color_time_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_time_2_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_2_against_control_color_time_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_time_2_against_control_color_time_3 done")
 
 Diffmeth.norm_all_control_color_time_2_against_control_color_time_3.interest=getMethylDiff(Diffmeth.norm_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.01)
@@ -2154,7 +2154,7 @@ write.table(Diffmeth.norm_all_control_color_time_2_against_control_color_time_3.
 
 Diffmeth.norm_all_control_color_time_1_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_3, mc.cores = 4)
 save(Diffmeth.norm_all_control_color_time_1_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_3.rda")
-write.table(DDiffmeth.norm_all_control_color_time_1_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_control_color_time_1_against_control_color_time_3, file = "Diffmeth.norm_all_control_color_time_1_against_control_color_time_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_control_color_time_1_against_control_color_time_3 done")
 
 Diffmeth.norm_all_control_color_time_1_against_control_color_time_3.interest=getMethylDiff(Diffmeth.norm_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.01)
@@ -2208,7 +2208,7 @@ treatment=c(0,0,0,1,1,1))
 
 Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_2, mc.cores = 4)
 save(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2.rda")
-write.table(DDiffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2 done")
 
 Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2.interest=getMethylDiff(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.01)
@@ -2226,7 +2226,7 @@ write.table(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_tim
 
 Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_2_against_treatment_color_time_3, mc.cores = 4)
 save(Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3.rda")
-write.table(DDiffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3 done")
 
 Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3.interest=getMethylDiff(Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.01)
@@ -2244,7 +2244,7 @@ write.table(Diffmeth.norm_all_treatment_color_time_2_against_treatment_color_tim
 
 Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_3, mc.cores = 4)
 save(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3.rda")
-write.table(DDiffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
+write.table(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3, file = "Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
 message("Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3 done")
 
 Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3.interest=getMethylDiff(Diffmeth.norm_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.01)
