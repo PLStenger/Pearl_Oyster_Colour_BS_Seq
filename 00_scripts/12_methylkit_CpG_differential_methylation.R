@@ -2574,59 +2574,59 @@ treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
 
 
 
+###################################################################
+## filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green
+###################################################################
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_green =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green, mc.cores = 4)
+#save(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.rda")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.txt", sep = "\t", quote = FALSE)
+#message("Diffmeth.norm_color_battle_all_red_vs_all_green done")
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_green.interest=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01)
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hyper")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hypo")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+#
+###################################################################
+## filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow
+###################################################################
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_yellow =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow, mc.cores = 4)
+#save(Diffmeth.norm_color_battle_all_red_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.rda")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.txt", sep = "\t", quote = FALSE)
+#message("Diffmeth.norm_color_battle_all_red_vs_all_yellow done")
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01)
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hyper")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hyper, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hypo")
+#write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hypo, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+#
+###################################################################
+# filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow
 ##################################################################
-# filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green
-##################################################################
 
-Diffmeth.norm_color_battle_all_red_vs_all_green =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green, mc.cores = 4)
-save(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.rda")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.txt", sep = "\t", quote = FALSE)
-message("Diffmeth.norm_color_battle_all_red_vs_all_green done")
+Diffmeth.norm_color_battle_all_green_vs_all_yellow =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow, mc.cores = 4)
+save(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.rda")
+write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.txt", sep = "\t", quote = FALSE)
+message("Diffmeth.norm_color_battle_all_green_vs_all_yellow done")
 
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01)
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01)
+write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hyper")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hyper")
+write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
 
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hypo")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
-
-##################################################################
-# filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow
-##################################################################
-
-Diffmeth.norm_color_battle_all_red_vs_all_yellow =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow, mc.cores = 4)
-save(Diffmeth.norm_color_battle_all_red_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.rda")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.txt", sep = "\t", quote = FALSE)
-message("Diffmeth.norm_color_battle_all_red_vs_all_yellow done")
-
-Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01)
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hyper")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hyper, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hypo")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_yellow.interest.hypo, file = "Diffmeth.norm_color_battle_all_red_vs_all_yellow_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
-
-##################################################################
-# filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green
-##################################################################
-
-Diffmeth.norm_color_battle_all_red_vs_all_green =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green, mc.cores = 4)
-save(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.rda")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.txt", sep = "\t", quote = FALSE)
-message("Diffmeth.norm_color_battle_all_red_vs_all_green done")
-
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01)
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest, file = "Diffmeth.norm_color_battle_all_red_vs_all_green.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hyper")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hyper, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_red_vs_all_green, difference = 25, qvalue = 0.01, type = "hypo")
-write.table(Diffmeth.norm_color_battle_all_red_vs_all_green.interest.hypo, file = "Diffmeth.norm_color_battle_all_red_vs_all_green_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hypo")
+write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
 
 
 
