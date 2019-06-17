@@ -1135,253 +1135,253 @@ filtered.normalized.myallmeth.10_unite=unite(filtered.normalized.myallmeth.10,de
 
 ########################################## object from processBismarkAln ####################################
 
-
-control_red_1_treament_red_1=reorganize(my_meth_all_together, 
-	sample.ids=c("1-R-180","1-R-183"),
-	treatment=c(1,0) )
-	
-control_red_1_treament_red_2=reorganize(my_meth_all_together, 
-	sample.ids=c("1-R-180","2-R-183"),
-	treatment=c(1,0) )
-
-control_red_1_treament_red_3=reorganize(my_meth_all_together, 
-	sample.ids=c("1-R-180","3-R-183"),
-	treatment=c(1,0) )	
-	
-control_red_2_treament_red_1=reorganize(my_meth_all_together, 
-	sample.ids=c("2-R-180","1-R-183"),
-	treatment=c(1,0) )
-	
-control_red_2_treament_red_2=reorganize(my_meth_all_together, 
-	sample.ids=c("2-R-180","2-R-183"),
-	treatment=c(1,0) )
-	
-control_red_2_treament_red_3=reorganize(my_meth_all_together, 
-	sample.ids=c("2-R-180","3-R-183"),
-	treatment=c(1,0) )
-
-control_red_3_treament_red_1=reorganize(my_meth_all_together, 
-	sample.ids=c("3-R-180","1-R-183"),
-	treatment=c(1,0) )
-
-control_red_3_treament_red_2=reorganize(my_meth_all_together, 
-	sample.ids=c("3-R-180","2-R-183"),
-	treatment=c(1,0) )
-		
-control_red_3_treament_red_3=reorganize(my_meth_all_together, 
-	sample.ids=c("3-R-180","3-R-183"),
-	treatment=c(1,0) )
-	
-	
-	
-	
-	
-	
-	
-	
-control_green_1_treament_green_1=reorganize(my_meth_all_together, 
-	sample.ids=c("1-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-control_green_1_treament_green_2=reorganize(my_meth_all_together, 
-	sample.ids=c("1-V-613","2-V-620"),
-	treatment=c(1,0) )
-
-control_green_1_treament_green_3=reorganize(my_meth_all_together, 
-	sample.ids=c("1-V-613","3-V-620"),
-	treatment=c(1,0) )	
-
-control_green_2_treament_green_1=reorganize(my_meth_all_together, 
-	sample.ids=c("2-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-control_green_2_treament_green_2=reorganize(my_meth_all_together, 
-	sample.ids=c("2-V-613","2-V-620"),
-	treatment=c(1,0) )
-
-control_green_2_treament_green_3=reorganize(my_meth_all_together, 
-	sample.ids=c("2-V-613","3-V-620"),
-	treatment=c(1,0) )
-
-control_green_3_treament_green_1=reorganize(my_meth_all_together, 
-	sample.ids=c("3-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-control_green_3_treament_green_2=reorganize(my_meth_all_together, 
-	sample.ids=c("3-V-613","2-V-620"),
-	treatment=c(1,0) )
-	
-control_green_3_treament_green_3=reorganize(my_meth_all_together, 
-	sample.ids=c("3-V-613","3-V-620"),
-	treatment=c(1,0) )	
-
-
-	
-	
-	
-	
-control_yellow_1_treament_yellow_1=reorganize(my_meth_all_together, 
-	sample.ids=c("1-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_1_treament_yellow_2=reorganize(my_meth_all_together, 
-	sample.ids=c("1-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_1_treament_yellow_3=reorganize(my_meth_all_together, 
-	sample.ids=c("1-J-2","3-J-7"),
-	treatment=c(1,0) )	
-
-control_yellow_2_treament_yellow_1=reorganize(my_meth_all_together, 
-	sample.ids=c("2-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_2_treament_yellow_2=reorganize(my_meth_all_together, 
-	sample.ids=c("2-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_2_treament_yellow_3=reorganize(my_meth_all_together, 
-	sample.ids=c("2-J-2","3-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_3_treament_yellow_1=reorganize(my_meth_all_together, 
-	sample.ids=c("3-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_3_treament_yellow_2=reorganize(my_meth_all_together, 
-	sample.ids=c("3-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-control_yellow_3_treament_yellow_3=reorganize(my_meth_all_together, 
-	sample.ids=c("3-J-2","3-J-7"),
-	treatment=c(1,0) )	
-
-
-############################################ object from unite function #####################################
-
-
-
-filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-R-180","1-R-183"),
-	treatment=c(1,0) )
-	
-filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-R-180","2-R-183"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-R-180","3-R-183"),
-	treatment=c(1,0) )	
-	
-filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-R-180","1-R-183"),
-	treatment=c(1,0) )
-	
-filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-R-180","2-R-183"),
-	treatment=c(1,0) )
-	
-filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-R-180","3-R-183"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-R-180","1-R-183"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-R-180","2-R-183"),
-	treatment=c(1,0) )
-		
-filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-R-180","3-R-183"),
-	treatment=c(1,0) )
-	
-	
-	
-	
-	
-	
-	
-	
-filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-V-613","2-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-V-613","3-V-620"),
-	treatment=c(1,0) )	
-
-filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-V-613","2-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-V-613","3-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-V-613","1-V-620"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-V-613","2-V-620"),
-	treatment=c(1,0) )
-	
-filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-V-613","3-V-620"),
-	treatment=c(1,0) )	
-
-
-	
-	
-	
-	
-filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-J-2","3-J-7"),
-	treatment=c(1,0) )	
-
-filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("2-J-2","3-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-J-2","1-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-J-2","2-J-7"),
-	treatment=c(1,0) )
-
-filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("3-J-2","3-J-7"),
-	treatment=c(1,0) )	
-
-
+#
+#control_red_1_treament_red_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#	
+#control_red_1_treament_red_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#
+#control_red_1_treament_red_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-R-180","3-R-183"),
+#	treatment=c(1,0) )	
+#	
+#control_red_2_treament_red_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#	
+#control_red_2_treament_red_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#	
+#control_red_2_treament_red_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-R-180","3-R-183"),
+#	treatment=c(1,0) )
+#
+#control_red_3_treament_red_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#
+#control_red_3_treament_red_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#		
+#control_red_3_treament_red_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-R-180","3-R-183"),
+#	treatment=c(1,0) )
+#	
+#	
+#	
+#	
+#	
+#	
+#	
+#	
+#control_green_1_treament_green_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_1_treament_green_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_1_treament_green_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-V-613","3-V-620"),
+#	treatment=c(1,0) )	
+#
+#control_green_2_treament_green_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_2_treament_green_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_2_treament_green_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-V-613","3-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_3_treament_green_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#control_green_3_treament_green_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#	
+#control_green_3_treament_green_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-V-613","3-V-620"),
+#	treatment=c(1,0) )	
+#
+#
+#	
+#	
+#	
+#	
+#control_yellow_1_treament_yellow_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_1_treament_yellow_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_1_treament_yellow_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-J-2","3-J-7"),
+#	treatment=c(1,0) )	
+#
+#control_yellow_2_treament_yellow_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_2_treament_yellow_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_2_treament_yellow_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("2-J-2","3-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_3_treament_yellow_1=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_3_treament_yellow_2=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#control_yellow_3_treament_yellow_3=reorganize(my_meth_all_together, 
+#	sample.ids=c("3-J-2","3-J-7"),
+#	treatment=c(1,0) )	
+#
+#
+############################################# object from unite function #####################################
+#
+#
+#
+#filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#	
+#filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_red_1_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-R-180","3-R-183"),
+#	treatment=c(1,0) )	
+#	
+#filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#	
+#filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#	
+#filtered.normalized.myallmeth.10_unite_control_red_2_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-R-180","3-R-183"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-R-180","1-R-183"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-R-180","2-R-183"),
+#	treatment=c(1,0) )
+#		
+#filtered.normalized.myallmeth.10_unite_control_red_3_treament_red_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-R-180","3-R-183"),
+#	treatment=c(1,0) )
+#	
+#	
+#	
+#	
+#	
+#	
+#	
+#	
+#filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_1_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-V-613","3-V-620"),
+#	treatment=c(1,0) )	
+#
+#filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_2_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-V-613","3-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-V-613","1-V-620"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-V-613","2-V-620"),
+#	treatment=c(1,0) )
+#	
+#filtered.normalized.myallmeth.10_unite_control_green_3_treament_green_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-V-613","3-V-620"),
+#	treatment=c(1,0) )	
+#
+#
+#	
+#	
+#	
+#	
+#filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_1_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-J-2","3-J-7"),
+#	treatment=c(1,0) )	
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_2_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("2-J-2","3-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-J-2","1-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-J-2","2-J-7"),
+#	treatment=c(1,0) )
+#
+#filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("3-J-2","3-J-7"),
+#	treatment=c(1,0) )	
+#
+#
 
 ##############################################################################################################
 ######################################### DIFFERENTIAL METHYLATION ANALYSIS ##################################
@@ -2263,95 +2263,95 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 ##############################################################################################################
 ############################################## CTRL vs TREATMENT #############################################
 ##############################################################################################################
-#
-#all_control_color_against_all_treatment_color_time_1=reorganize(my_meth_all_together, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "1-R-183", "1-J-7", "1-V-620"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "1-R-183", "1-J-7", "1-V-620"),
-#treatment=c(0,0,0,1,1,1))
-#
-#all_control_color_against_all_treatment_color_time_2=reorganize(my_meth_all_together, 
-#	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "2-R-183", "2-J-7", "2-V-620"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "2-R-183", "2-J-7", "2-V-620"),
-#treatment=c(0,0,0,1,1,1))
-#
-#all_control_color_against_all_treatment_color_time_3=reorganize(my_meth_all_together, 
-#	sample.ids=c("3-R-180", "3-V-620", "3-V-613", "3-R-183", "3-J-7", "3-J-2"),
-#treatment=c(0,0,0,1,1,1))	
-#	
-#filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
-#	sample.ids=c("3-R-180", "3-V-620", "3-V-613", "3-R-183", "3-J-7", "3-J-2"),
-#treatment=c(0,0,0,1,1,1))
-#
-#
-##############################################################################################################
-######################################### DIFFERENTIAL METHYLATION ANALYSIS ##################################
-##############################################################################################################
-#
-#
-#
-###################################################################
-## filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1
-###################################################################
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1, mc.cores = 4)
-#save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.rda")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.txt", sep = "\t", quote = FALSE)
-#message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 done")
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01)
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hyper")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hypo")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
-#
-#
-###################################################################
-## filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2
-###################################################################
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2, mc.cores = 4)
-#save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.rda")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
-#message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 done")
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01)
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hyper")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hypo")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
-#
-#
-#
-###################################################################
-## filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3
-###################################################################
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3, mc.cores = 4)
-#save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.rda")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
-#message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 done")
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01)
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-#
-#Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
-#write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
-#
+
+all_control_color_against_all_treatment_color_time_1=reorganize(my_meth_all_together, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "1-R-183", "1-J-7", "1-V-620"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("1-R-180", "1-J-2", "1-V-613", "1-R-183", "1-J-7", "1-V-620"),
+treatment=c(0,0,0,1,1,1))
+
+all_control_color_against_all_treatment_color_time_2=reorganize(my_meth_all_together, 
+	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "2-R-183", "2-J-7", "2-V-620"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("2-R-180", "2-J-2", "2-V-613", "2-R-183", "2-J-7", "2-V-620"),
+treatment=c(0,0,0,1,1,1))
+
+all_control_color_against_all_treatment_color_time_3=reorganize(my_meth_all_together, 
+	sample.ids=c("3-R-180", "3-V-620", "3-V-613", "3-R-183", "3-J-7", "3-J-2"),
+treatment=c(0,0,0,1,1,1))	
+	
+filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3=reorganize(filtered.normalized.myallmeth.10_unite, 
+	sample.ids=c("3-R-180", "3-V-620", "3-V-613", "3-R-183", "3-J-7", "3-J-2"),
+treatment=c(0,0,0,1,1,1))
+
+
+#############################################################################################################
+######################################## DIFFERENTIAL METHYLATION ANALYSIS ##################################
+#############################################################################################################
+
+
+
+##################################################################
+# filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1
+##################################################################
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1, mc.cores = 4)
+save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.rda")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1 done")
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hyper")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hypo")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_1_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+
+
+##################################################################
+# filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2
+##################################################################
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2, mc.cores = 4)
+save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.rda")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2 done")
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hyper")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hypo")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_2_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+
+
+
+##################################################################
+# filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3
+##################################################################
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3, mc.cores = 4)
+save(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.rda")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3 done")
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
+write.table(Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_all_control_color_against_all_treatment_color_time_3_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+
 #
 #
 ##############################################################################################################
@@ -2542,31 +2542,31 @@ filtered.normalized.myallmeth.10_unite_control_yellow_3_treament_yellow_3=reorga
 #############################################################################################################
 ############################################## COLOR vs COLOR ###############################################
 #############################################################################################################
-
-color_battle_all_red_vs_all_green=reorganize(my_meth_all_together, 
-	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
-	
-filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
-
-color_battle_all_red_vs_all_yellow=reorganize(my_meth_all_together, 
-	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
-	
-filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
-
-color_battle_all_green_vs_all_yellow=reorganize(my_meth_all_together, 
-	sample.ids=c("1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620","1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
-	
-filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow=reorganize(filtered.normalized.myallmeth.10_unite, 
-	sample.ids=c("1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620","1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
-treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
-
+#
+#color_battle_all_red_vs_all_green=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
+#	
+#filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_green=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
+#
+#color_battle_all_red_vs_all_yellow=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))	
+#	
+#filtered.normalized.myallmeth.10_unite_color_battle_all_red_vs_all_yellow=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-R-180", "2-R-180", "3-R-180", "1-R-183","2-R-183","3-R-183", "1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
+#
+#color_battle_all_green_vs_all_yellow=reorganize(my_meth_all_together, 
+#	sample.ids=c("1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620","1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
+#	
+#filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow=reorganize(filtered.normalized.myallmeth.10_unite, 
+#	sample.ids=c("1-V-613","2-V-613","3-V-613", "1-V-620", "2-V-620", "3-V-620","1-J-2","2-J-2","3-J-2", "1-J-7","2-J-7","3-J-7"),
+#treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
+#
 
 #############################################################################################################
 ######################################## DIFFERENTIAL METHYLATION ANALYSIS ##################################
@@ -2612,21 +2612,21 @@ treatment=c(0,0,0,0,0,0,1,1,1,1,1,1))
 #
 ###################################################################
 # filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow
-##################################################################
-
-Diffmeth.norm_color_battle_all_green_vs_all_yellow =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow, mc.cores = 4)
-save(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.rda")
-write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.txt", sep = "\t", quote = FALSE)
-message("Diffmeth.norm_color_battle_all_green_vs_all_yellow done")
-
-Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01)
-write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hyper")
-write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
-
-Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hypo")
-write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
+###################################################################
+#
+#Diffmeth.norm_color_battle_all_green_vs_all_yellow =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_color_battle_all_green_vs_all_yellow, mc.cores = 4)
+#save(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.rda")
+#write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.txt", sep = "\t", quote = FALSE)
+#message("Diffmeth.norm_color_battle_all_green_vs_all_yellow done")
+#
+#Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01)
+#write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest_diff25.q0.001.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hyper")
+#write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hyper, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hyper.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo=getMethylDiff(Diffmeth.norm_color_battle_all_green_vs_all_yellow, difference = 25, qvalue = 0.01, type = "hypo")
+#write.table(Diffmeth.norm_color_battle_all_green_vs_all_yellow.interest.hypo, file = "Diffmeth.norm_color_battle_all_green_vs_all_yellow_diff25.q0.001.hypo.txt", sep = "\t", quote = FALSE)
 
 
 
