@@ -470,58 +470,58 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
 ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
 
-###### ALL ALL ALL 
-list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
-"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
-"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
-
-###### ALL ALL ALL 
-list.id_all_together=list("1-R-183",
-"2-R-183",
-"3-R-183",
-"1-J-7",
-"2-J-7",
-"3-J-7",
-"1-V-620",
-"2-V-620",
-"3-V-620",
-"1-R-180",
-"2-R-180",
-"3-R-180",
-"1-J-2",
-"2-J-2",
-"3-J-2",
-"1-V-613",
-"2-V-613",
-"3-V-613")
-
-my_meth_all_together=processBismarkAln(location=list.bam_all_together,
-                sample.id=list.id_all_together,
-                assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call_all_together_clean",
-                save.context=c("CpG"),
-                read.context="CpG",
-                mincov=10,
-                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
-
-save(my_meth_all_together, file = "my_meth_all_together_clean.rda")
-#print(my_meth_all_together[[1]]@dbpath)
-message ("my_meth_all_together_clean.done")
+####### ALL ALL ALL 
+#list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+#"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+#"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
+#
+####### ALL ALL ALL 
+#list.id_all_together=list("1-R-183",
+#"2-R-183",
+#"3-R-183",
+#"1-J-7",
+#"2-J-7",
+#"3-J-7",
+#"1-V-620",
+#"2-V-620",
+#"3-V-620",
+#"1-R-180",
+#"2-R-180",
+#"3-R-180",
+#"1-J-2",
+#"2-J-2",
+#"3-J-2",
+#"1-V-613",
+#"2-V-613",
+#"3-V-613")
+#
+#my_meth_all_together=processBismarkAln(location=list.bam_all_together,
+#                sample.id=list.id_all_together,
+#                assembly="sspace.final.scaffolds.fasta",
+#                save.folder="methylation_call_all_together_clean",
+#                save.context=c("CpG"),
+#                read.context="CpG",
+#                mincov=10,
+#                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
+#
+#save(my_meth_all_together, file = "my_meth_all_together_clean.rda")
+##print(my_meth_all_together[[1]]@dbpath)
+#message ("my_meth_all_together_clean.done")
 
 ####################################
 #### FILTER THE METHYLATION CALL ###
@@ -627,3 +627,57 @@ message ("my_meth_all_together_clean.done")
 #
 #message("get diffmeth of interest done")
 #
+
+
+###### ALL ALL ALL INVERSED
+list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
+
+###### ALL ALL ALL INVERSED
+list.id_all_together=list("1-R-183",
+"2-R-183",
+"3-R-183",
+"1-J-7",
+"2-J-7",
+"3-J-7",
+"1-V-620",
+"2-V-620",
+"3-V-620",
+"1-R-180",
+"2-R-180",
+"3-R-180",
+"1-J-2",
+"2-J-2",
+"3-J-2",
+"1-V-613",
+"2-V-613",
+"3-V-613")
+
+my_meth_all_together_inversed=processBismarkAln(location=list.bam_all_together,
+                sample.id=list.id_all_together,
+                assembly="sspace.final.scaffolds.fasta",
+                save.folder="methylation_call_all_together_clean_inversed",
+                save.context=c("CpG"),
+                read.context="CpG",
+                mincov=10,
+                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
+
+save(my_meth_all_together_inversed, file = "my_meth_all_together_clean_INVERSED.rda")
+#print(my_meth_all_together[[1]]@dbpath)
+message ("my_meth_all_together_clean_INVERSED.done")
