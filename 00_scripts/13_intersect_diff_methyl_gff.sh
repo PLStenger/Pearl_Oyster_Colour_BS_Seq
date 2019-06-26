@@ -14,7 +14,8 @@ cd $DATADIRECTORY
 
 $BEDTOOLS_ENV
 
-for FILE in $(ls $DATADIRECTORY/Inversed_3V620_3J2_Diffmeth.norm_Q_0_05*.interest*.txt)
+#for FILE in $(ls $DATADIRECTORY/Inversed_3V620_3J2_Diffmeth.norm_Q_0_05*.interest*.txt)
+for FILE in $(ls $DATADIRECTORY/Diffmeth.norm_Inversed_3V620_3J2_color_battle_all*interest_diff25.q0.001.txt)
 
 do
 
