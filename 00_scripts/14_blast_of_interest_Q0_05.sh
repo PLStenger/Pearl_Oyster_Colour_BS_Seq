@@ -11,8 +11,9 @@ BANK=/home/ref-bioinfo/beedeem/p/NCBI_nr/current/NCBI_nr/NCBI_nr
 
 
 #QUERY1=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/interest_q0_05.fasta
-QUERY1=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/q0_05last.fasta
-OUT_FILE1=q0_05last.fasta_result_blast.txt
+#QUERY1=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/q0_05last.fasta
+QUERY1=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_data/q0_05_controls.fasta
+OUT_FILE1=q0_05_controls_result_blast.txt
 
 
 # Activation de l'environnement BLAST+ 2.6.0
