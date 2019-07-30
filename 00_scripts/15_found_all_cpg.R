@@ -6,7 +6,7 @@ library (tools)
 
 setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 
-load("R.objects/my_meth_all_together_clean_INVERSED.rda")
+load("my_meth_all_together_clean_INVERSED.rda")
 
 dat <- data.frame(my_meth_all_together_inversed[[1]]@.Data[[1]], my_meth_all_together_inversed[[1]]@.Data[[4]], my_meth_all_together_inversed[[1]]@.Data[[2]], my_meth_all_together_inversed[[1]]@.Data[[3]])
 write.table(dat, file = "1-R-183_cpg_count.txt")
