@@ -53,7 +53,7 @@ awk '{print $1"\t"$4"\t"$5"\t"$9}' /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Se
 awk '{print $1"\t"$3"\t"$4}' 3-V-620_cpg_count.txt_no_first_line_rearranged4.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt
 ##############
 
-bedtools intersect -a new_gff.gff3 -b 3-V-620_cpg_count.txt_no_first_line_rearranged5 > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged5_annotated.txt
+bedtools intersect -a new_gff.gff3 -b 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged5_annotated.txt
 
 #done;
 
