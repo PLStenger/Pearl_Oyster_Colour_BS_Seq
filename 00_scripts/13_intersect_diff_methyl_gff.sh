@@ -41,7 +41,7 @@ $BEDTOOLS_ENV
 
 #for FILE in $(ls $DATADIRECTORY/*_split_*)
 
-3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 | sed "s/\W\W/\t/g" > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
+sed "s/\W\W/\t/g" 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
 
 
 bedtools intersect -a $GFF -b 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_annotated.txt
