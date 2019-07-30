@@ -20,15 +20,15 @@ $BEDTOOLS_ENV
 #for FILE in $(ls $DATADIRECTORY/Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_*time_3.txt)
 #for FILE in $(ls $DATADIRECTORY/Diffmeth.norm_Inversed_3V620_3J2_color_battle_all_*yellow.txt)
 #for FILE in $(ls $DATADIRECTORY/*txt)
-#for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
+for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
 #
-#do
+do
 
-#tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
-#sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
-#awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
+tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
+sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
+awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
 
-#sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
+sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
 
 #split -l 200000 --numeric-suffixes ${FILE##*/}_no_first_line_rearranged3.txt ${FILE##*/}_no_first_line_rearranged3_split_
 
@@ -48,14 +48,20 @@ $BEDTOOLS_ENV
 ##############
 
 ################ ok
-sed "s/\W\W/\t/g" 3-V-620_cpg_count.txt_no_first_line_rearranged3.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged4.txt
-awk '{print $1"\t"$4"\t"$5"\t"$9}' /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/09_annotation/sspace.final.scaffolds_no_pipe_size.gff3 > new_gff.gff3
-awk '{print $1"\t"$3"\t"$4}' 3-V-620_cpg_count.txt_no_first_line_rearranged4.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt
+#sed "s/\W\W/\t/g" 3-V-620_cpg_count.txt_no_first_line_rearranged3.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged4.txt
+#awk '{print $1"\t"$4"\t"$5"\t"$9}' /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/09_annotation/sspace.final.scaffolds_no_pipe_size.gff3 > new_gff.gff3
+#awk '{print $1"\t"$3"\t"$4}' 3-V-620_cpg_count.txt_no_first_line_rearranged4.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt
 ##############
 
-bedtools intersect -a new_gff.gff3 -b 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged5_annotated.txt
+################ ok
+sed "s/\W\W/\t/g" ${FILE##*/}_no_first_line_rearranged3.txt > ${FILE##*/}_no_first_line_rearranged4.txt
+#awk '{print $1"\t"$4"\t"$5"\t"$9}' /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/09_annotation/sspace.final.scaffolds_no_pipe_size.gff3 > new_gff.gff3
+awk '{print $1"\t"$3"\t"$4}' ${FILE##*/}_no_first_line_rearranged4.txt > ${FILE##*/}_no_first_line_rearranged5.txt
+##############
 
-#done;
+bedtools intersect -a new_gff.gff3 -b ${FILE##*/}_no_first_line_rearranged5.txt > $OUTPUT/${FILE##*/}_annotated.txt
+
+done;
 
 #
 #do
