@@ -20,30 +20,30 @@ $BEDTOOLS_ENV
 #for FILE in $(ls $DATADIRECTORY/Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_*time_3.txt)
 #for FILE in $(ls $DATADIRECTORY/Diffmeth.norm_Inversed_3V620_3J2_color_battle_all_*yellow.txt)
 #for FILE in $(ls $DATADIRECTORY/*txt)
-for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
+#for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
 #
-do
+#do
 
-tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
-sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
-awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
+#tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
+#sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
+#awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
 
-sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
+#sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
 
-split -l 200000 --numeric-suffixes ${FILE##*/}_no_first_line_rearranged3.txt ${FILE##*/}_no_first_line_rearranged3_split_
+#split -l 200000 --numeric-suffixes ${FILE##*/}_no_first_line_rearranged3.txt ${FILE##*/}_no_first_line_rearranged3_split_
 
 #mac2unix ${FILE##*/}_no_first_line_rearranged2.txt
 
 #bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged3.txt > $OUTPUT/${FILE##*/}_annotated.txt
 
-done;
+#done;
 
 
-for FILE in $(ls $DATADIRECTORY/*_split_*)
+#for FILE in $(ls $DATADIRECTORY/*_split_*)
 
-bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/} > $OUTPUT/${FILE##*/}_annotated.txt
+bedtools intersect -a $GFF -b $DATADIRECTORY/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > $OUTPUT/${FILE##*/}_annotated.txt
 
-done;
+#done;
 
 #
 #do
