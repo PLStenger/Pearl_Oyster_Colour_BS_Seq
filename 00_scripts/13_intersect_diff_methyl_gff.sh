@@ -30,13 +30,21 @@ awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rea
 
 sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
 
-split -l 200000 --numeric-suffixes ${FILE##*/}_no_first_line_rearranged3.txt _split_
+split -l 200000 --numeric-suffixes ${FILE##*/}_no_first_line_rearranged3.txt ${FILE##*/}_no_first_line_rearranged3_split_
 
 #mac2unix ${FILE##*/}_no_first_line_rearranged2.txt
 
 #bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged3.txt > $OUTPUT/${FILE##*/}_annotated.txt
 
 done;
+
+
+for FILE in $(ls $DATADIRECTORY/*_split_*)
+
+bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/} > $OUTPUT/${FILE##*/}_annotated.txt
+
+done;
+
 #
 #do
 #
