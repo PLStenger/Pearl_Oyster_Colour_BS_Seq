@@ -18,7 +18,7 @@ $BEDTOOLS_ENV
 #for FILE in $(ls $DATADIRECTORY/Diffmeth.norm_Inversed_3V620_3J2_color_battle_all*interest_diff25.q0.001.txt)
 #for FILE in $(ls $DATADIRECTORY/Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_*time_3.txt)
 #for FILE in $(ls $DATADIRECTORY/Diffmeth.norm_Inversed_3V620_3J2_color_battle_all_*yellow.txt)
-for FILE in $(ls $DATADIRECTORY/_cpg_count.txt)
+for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
 
 do
 
