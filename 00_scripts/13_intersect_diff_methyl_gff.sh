@@ -41,7 +41,7 @@ $BEDTOOLS_ENV
 
 #for FILE in $(ls $DATADIRECTORY/*_split_*)
 
-bedtools intersect -a $GFF -b $DATADIRECTORY/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > $OUTPUT/${FILE##*/}_annotated.txt
+bedtools intersect -a $GFF -b $DATADIRECTORY/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_annotated.txt
 
 #done;
 
