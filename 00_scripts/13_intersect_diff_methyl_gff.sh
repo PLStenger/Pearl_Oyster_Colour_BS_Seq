@@ -24,8 +24,9 @@ do
 
 tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
 sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
+awk '{print $2"\t"$3"\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
 
-bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged.txt > $OUTPUT/${FILE##*/}_annotated.txt
+bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged2.txt > $OUTPUT/${FILE##*/}_annotated.txt
 
 done;
 
