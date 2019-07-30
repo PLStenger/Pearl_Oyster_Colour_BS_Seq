@@ -41,11 +41,11 @@ $BEDTOOLS_ENV
 
 #for FILE in $(ls $DATADIRECTORY/*_split_*)
 
-#sed "s/\W\W/\t/g" 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
-#cat 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 | awk '{ if ($2!=$3) print $0 }' > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
+sed "s/\W\W/\t/g" 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_1.txt
+#cat 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 | awk '{ if ($2!=$3) print $0 }' > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_1.txt
 
 awk '{print $1"\t"$4"\t"$5"\t"$9}' /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/09_annotation/sspace.final.scaffolds_no_pipe_size.gff3 > new_gff.gff3
-awk '{print $1"\t"$4"\t"$5"}' 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36 > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
+awk '{print $1"\t"$4"\t"$5"}' 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_1.txt > 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt
 
 
 bedtools intersect -a new_gff.gff3 -b 3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_2.txt > $OUTPUT/3-V-620_cpg_count.txt_no_first_line_rearranged3_split_36_annotated.txt
