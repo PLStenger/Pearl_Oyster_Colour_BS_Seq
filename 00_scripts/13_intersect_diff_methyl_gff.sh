@@ -23,7 +23,7 @@ for FILE in $(ls $DATADIRECTORY/*_cpg_count.txt)
 do
 
 tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
-sed 's/""//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
+sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
 
 bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged.txt > $OUTPUT/${FILE##*/}_annotated.txt
 
