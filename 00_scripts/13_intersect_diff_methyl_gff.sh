@@ -26,11 +26,13 @@ do
 
 tail -n +2 ${FILE##*/} > ${FILE##*/}_no_first_line.txt
 sed 's/"//g' ${FILE##*/}_no_first_line.txt > ${FILE##*/}_no_first_line_rearranged.txt
-awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5"\t"$6"\t"$7"\t"$8}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
+awk '{print $2"\t"".""\t""transcrit""\t"$4"\t"$5}' ${FILE##*/}_no_first_line_rearranged.txt > ${FILE##*/}_no_first_line_rearranged2.txt
+
+sort ${FILE##*/}_no_first_line_rearranged2.txt > ${FILE##*/}_no_first_line_rearranged3.txt
 
 #mac2unix ${FILE##*/}_no_first_line_rearranged2.txt
 
-bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged2.txt > $OUTPUT/${FILE##*/}_annotated.txt
+bedtools intersect -a $GFF -b $DATADIRECTORY/${FILE##*/}_no_first_line_rearranged3.txt > $OUTPUT/${FILE##*/}_annotated.txt
 
 done;
 #
