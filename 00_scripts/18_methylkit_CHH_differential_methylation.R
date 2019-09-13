@@ -104,13 +104,13 @@ filtered.normalized.myallmeth.10_unite=unite(my_meth_all_together_inversed_CHH,d
 #
 #message("Diffmeth_CHHdone")
 #
-#Diffmeth_CHH.interest=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01)
+#Diffmeth_CHH.interest=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.05)
 #write.table(Diffmeth_CHH.interest, file = "Diffmeth_CHH.diff25.q0.001_CHH.txt", sep = "\t", quote = FALSE)
 #
-#Diffmeth_CHH.interest.hyper=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hyper")
+#Diffmeth_CHH.interest.hyper=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.05, type = "hyper")
 #write.table(Diffmeth_CHH.interest.hyper, file = "Diffmeth_CHH.diff25.q0.001.hyper_CHH.txt", sep = "\t", quote = FALSE)
 #
-#Diffmeth_CHH.interest.hypo=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hypo")
+#Diffmeth_CHH.interest.hypo=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.05, type = "hypo")
 #write.table(Diffmeth_CHHinterest.hypo, file = "Diffmeth_CHH.diff25.q0.001.hypo_CHH.txt", sep = "\t", quote = FALSE)
 #
 #
@@ -127,7 +127,7 @@ filtered.normalized.myallmeth.10_unite=unite(my_meth_all_together_inversed_CHH,d
 
 ##############################################################################################################
 
-############################################## CUT OFF = qvalue = 0.01 ##########################################
+############################################## CUT OFF = qvalue = 0.05 ##########################################
 
 ##############################################################################################################
 
@@ -225,34 +225,34 @@ treatment=c(0,0,0,1,1,1))
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_1, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_1_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_1_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -269,34 +269,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_al
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_2, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_2_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_2_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -316,34 +316,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_al
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_against_all_treatment_color_time_3, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_against_all_treatment_color_time_3_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_against_all_treatment_color_time_3_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -441,34 +441,34 @@ treatment=c(0,0,0,1,1,1))
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_2, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_2, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_2_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_2_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -482,34 +482,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_aga
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_2_against_control_color_time_3, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_2_against_control_color_time_3, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_against_control_color_time_3_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_2_against_control_color_time_3_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -523,34 +523,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_2_aga
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_3, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_control_color_time_1_against_control_color_time_3, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_control_color_time_1_against_control_color_time_3_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_control_color_time_1_against_control_color_time_3_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -645,34 +645,34 @@ treatment=c(0,0,0,1,1,1))
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_2, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_2, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_2_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_2_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -686,34 +686,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_a
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_2_against_treatment_color_time_3, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_2_against_treatment_color_time_3, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_against_treatment_color_time_3_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_2_against_treatment_color_time_3_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
@@ -727,34 +727,34 @@ write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_2_a
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_3, mc.cores = 4)
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3 =calculateDiffMeth(filtered.normalized.myallmeth.10_unite_all_treatment_color_time_1_against_treatment_color_time_3, mc.cores = 4)
 
-save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3_CHH.rda")
+save(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3_CHH.rda")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3_CHH.txt", sep = "\t", quote = FALSE)
 
-message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3 done")
-
-
-
-
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.01)
-
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest_diff25.q0_01_CHH.txt", sep = "\t", quote = FALSE)
+message("Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3 done")
 
 
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hyper")
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.05)
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3_diff25.q0_01.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest_diff25.q0_05_CHH.txt", sep = "\t", quote = FALSE)
 
 
-Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.01, type = "hypo")
 
-write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_01_all_treatment_color_time_1_against_treatment_color_time_3_diff25.q0_01.hypo_CHH.txt", sep = "\t", quote = FALSE)
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest.hyper=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hyper")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest.hyper, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3_diff25.q0_05.hyper_CHH.txt", sep = "\t", quote = FALSE)
+
+
+
+
+Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest.hypo=getMethylDiff(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3, difference = 25, qvalue = 0.05, type = "hypo")
+
+write.table(Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3.interest.hypo, file = "Inversed_3V620_3J2_Diffmeth.norm_Q_0_05_all_treatment_color_time_1_against_treatment_color_time_3_diff25.q0_05.hypo_CHH.txt", sep = "\t", quote = FALSE)
 
 
 
