@@ -21,63 +21,63 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 
 
 ###### ALL ALL ALL INVERSED
-list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
-"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
-"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
-"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
-
-##############################################################################################################
-######################## COLOR POOLED with 3-J-2 changed with 3-V-620 and vice&versa #########################
-##############################################################################################################
-
-
-###### ALL ALL ALL INVERSED
-list.id_all_together=list("1-R-183",
-"2-R-183",
-"3-R-183",
-"1-J-7",
-"2-J-7",
-"3-J-7",
-"1-V-620",
-"2-V-620",
-"3-V-620",
-"1-R-180",
-"2-R-180",
-"3-R-180",
-"1-J-2",
-"2-J-2",
-"3-J-2",
-"1-V-613",
-"2-V-613",
-"3-V-613")
-
-my_meth_all_together_inversed_CHG=processBismarkAln(location=list.bam_all_together,
-                sample.id=list.id_all_together,
-                assembly="sspace.final.scaffolds.fasta",
-                save.folder="methylation_call_all_together_clean_inversed_CHG",
-                save.context=c("CHG"),
-                read.context="CHG",
-                mincov=10,
-                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
-
-save(my_meth_all_together_inversed_CHG, file = "my_meth_all_together_clean_INVERSED_CHG_CHG.rda")
-#print(my_meth_all_together[[1]]@dbpath)
-message ("my_meth_all_together_clean_INVERSED_CHG.done")
-
+#list.bam_all_together=list("Index_2.1-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_3.2-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_5.3-R-183_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_21.1-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_22.2-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_23.3-J-7_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_20.3-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_25.1-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_27.2-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_1.3-R-180_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_18.1-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_19.2-J-2_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_11.3-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam",
+#"Index_6.1-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+#"Index_7.2-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam",
+#"Index_8.3-V-613_R1_paired_bismark_bt2_pe.deduplicated.bam_sorted_clean.bam")
+#
+###############################################################################################################
+######################### COLOR POOLED with 3-J-2 changed with 3-V-620 and vice&versa #########################
+###############################################################################################################
+#
+#
+####### ALL ALL ALL INVERSED
+#list.id_all_together=list("1-R-183",
+#"2-R-183",
+#"3-R-183",
+#"1-J-7",
+#"2-J-7",
+#"3-J-7",
+#"1-V-620",
+#"2-V-620",
+#"3-V-620",
+#"1-R-180",
+#"2-R-180",
+#"3-R-180",
+#"1-J-2",
+#"2-J-2",
+#"3-J-2",
+#"1-V-613",
+#"2-V-613",
+#"3-V-613")
+#
+#my_meth_all_together_inversed_CHG=processBismarkAln(location=list.bam_all_together,
+#                sample.id=list.id_all_together,
+#                assembly="sspace.final.scaffolds.fasta",
+#                save.folder="methylation_call_all_together_clean_inversed_CHG",
+#                save.context=c("CHG"),
+#                read.context="CHG",
+#                mincov=10,
+#                treatment=c(0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5))
+#
+#save(my_meth_all_together_inversed_CHG, file = "my_meth_all_together_clean_INVERSED_CHG_CHG.rda")
+##print(my_meth_all_together[[1]]@dbpath)
+#message ("my_meth_all_together_clean_INVERSED_CHG.done")
+#
 
 
 ### COMPARATIVE ANALYSIS ###
@@ -85,13 +85,13 @@ message ("my_meth_all_together_clean_INVERSED_CHG.done")
 ## Per Base ##
 
 # without normalization #
-#load("R.objects/filtered.myallmeth.10_CHG.rda")
+load("my_meth_all_together_clean_INVERSED_CHG_CHG.rda")
 Allmeth_CHG=unite(my_meth_all_together_inversed_CHG,destrand = FALSE)
 
 
 write.table(Allmeth_CHG, file = "Allmeth_CHG_CHG.txt", sep = "\t", quote = FALSE)
 
-perc.Allmeth_CHG <- percMethylation(Allmeth)
+perc.Allmeth_CHG <- percMethylation(Allmeth_CHG)
 write.table(perc.Allmeth_CHG, file = "Allmeth.percent_CHG_CHG.txt", sep = "\t", quote = FALSE)
 message ("done perc meth_CHG")
 
