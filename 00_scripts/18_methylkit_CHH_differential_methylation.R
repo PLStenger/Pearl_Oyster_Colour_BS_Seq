@@ -86,36 +86,36 @@ setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark")
 
 # without normalization #
 load("my_meth_all_together_clean_INVERSED_CHH_CHH.rda")
-Allmeth_CHH=unite(my_meth_all_together_inversed_CHH,destrand = FALSE)
+filtered.normalized.myallmeth.10_unite=unite(my_meth_all_together_inversed_CHH,destrand = FALSE)
 
 
-#write.table(Allmeth_CHH, file = "Allmeth_CHH_CHH.txt", sep = "\t", quote = FALSE)
-
-perc.Allmeth_CHH <- percMethylation(Allmeth_CHH)
-write.table(perc.Allmeth_CHH, file = "Allmeth.percent_CHH_CHH.txt", sep = "\t", quote = FALSE)
-message ("done perc meth_CHH")
-
-### DIFFERENTIAL METHYLATION ANALYSIS ###
-
-
-Diffmeth_CHH=calculateDiffMeth(Allmeth_CHH, mc.cores = 4)
-
-write.table(Diffmeth_CHH, file = "Diffmeth_CHH_CHH.txt", sep = "\t", quote = FALSE)
-
-message("Diffmeth_CHHdone")
-
-Diffmeth_CHH.interest=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01)
-write.table(Diffmeth_CHH.interest, file = "Diffmeth_CHH.diff25.q0.001_CHH.txt", sep = "\t", quote = FALSE)
-
-Diffmeth_CHH.interest.hyper=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hyper")
-write.table(Diffmeth_CHH.interest.hyper, file = "Diffmeth_CHH.diff25.q0.001.hyper_CHH.txt", sep = "\t", quote = FALSE)
-
-Diffmeth_CHH.interest.hypo=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hypo")
-write.table(Diffmeth_CHHinterest.hypo, file = "Diffmeth_CHH.diff25.q0.001.hypo_CHH.txt", sep = "\t", quote = FALSE)
-
-
-message("get Diffmeth_CHH of interest done")
-
+##write.table(Allmeth_CHH, file = "Allmeth_CHH_CHH.txt", sep = "\t", quote = FALSE)
+#
+#perc.Allmeth_CHH <- percMethylation(Allmeth_CHH)
+#write.table(perc.Allmeth_CHH, file = "Allmeth.percent_CHH_CHH.txt", sep = "\t", quote = FALSE)
+#message ("done perc meth_CHH")
+#
+#### DIFFERENTIAL METHYLATION ANALYSIS ###
+#
+#
+#Diffmeth_CHH=calculateDiffMeth(Allmeth_CHH, mc.cores = 4)
+#
+#write.table(Diffmeth_CHH, file = "Diffmeth_CHH_CHH.txt", sep = "\t", quote = FALSE)
+#
+#message("Diffmeth_CHHdone")
+#
+#Diffmeth_CHH.interest=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01)
+#write.table(Diffmeth_CHH.interest, file = "Diffmeth_CHH.diff25.q0.001_CHH.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth_CHH.interest.hyper=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hyper")
+#write.table(Diffmeth_CHH.interest.hyper, file = "Diffmeth_CHH.diff25.q0.001.hyper_CHH.txt", sep = "\t", quote = FALSE)
+#
+#Diffmeth_CHH.interest.hypo=getMethylDiff(Diffmeth_CHH, difference = 25, qvalue = 0.01, type = "hypo")
+#write.table(Diffmeth_CHHinterest.hypo, file = "Diffmeth_CHH.diff25.q0.001.hypo_CHH.txt", sep = "\t", quote = FALSE)
+#
+#
+#message("get Diffmeth_CHH of interest done")
+#
 
 
 
