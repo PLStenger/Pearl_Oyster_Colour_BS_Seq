@@ -11,7 +11,7 @@ cd $DATADIRECTORY
 
 $BEDTOOLS_ENV
 
-for FILE in $(ls $DATADIRECTORY/*._sorted_clean.bam)
+for FILE in $(ls $DATADIRECTORY/*_sorted_clean.bam)
 do
          bedtools bamtobed -i ${FILE##*/} > ${FILE##*/}.bed
 done ;
