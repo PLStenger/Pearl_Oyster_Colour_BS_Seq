@@ -31,5 +31,5 @@ do
        sed 's/ /\t/g' ${FILE##*/}_correspondance_02.bed > ${FILE##*/}_base.txt
 done ;
 
-rm *_correspondance*
+#rm *_correspondance*
 
