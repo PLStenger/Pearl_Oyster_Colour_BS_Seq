@@ -12,8 +12,10 @@ cd $DATADIRECTORY
 
 $BEDTOOLS_ENV
 
-bedtools map -a Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bed -b Correspondance_scaff_07.gff > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
+#bedtools map -a Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bed -b Correspondance_scaff_07.gff > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
 #bedtools intersect -a Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bed -b Correspondance_scaff_07.gff > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
+
+bedtools map -a Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.sorted.bed -b Correspondance_scaff_07_sorted.gff > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
 
 
 #for FILE in $(ls $DATADIRECTORY/*_sorted_clean.bam)
