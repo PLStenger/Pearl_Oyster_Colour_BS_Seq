@@ -17,11 +17,19 @@ $BEDTOOLS_ENV
 
 #bedtools map -a Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.sorted.bed -b Correspondance_scaff_07_sorted.gff > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
 
-bedtools intersect -b Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bed -a Correspondance_scaff_07.gff -wa -wb > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
+# OK
+#bedtools intersect -b Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bed -a Correspondance_scaff_07.gff -wa -wb > Index_9.1-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam_correspondance.bed
 
+for FILE in $(ls $DATADIRECTORY/*clean.bam.bed)
+do
+        bedtools intersect -b ${FILE##*/} -a Correspondance_scaff_07.gff -wa -wb > ${FILE##*/}_correspondance.bed
+done ;
 
-#for FILE in $(ls $DATADIRECTORY/*_sorted_clean.bam)
-#do
-#         bedtools bamtobed -i ${FILE##*/} > ${FILE##*/}.bed
-#done ;
+for FILE in $(ls $DATADIRECTORY/*_correspondance.bed)
+do
+       awk '{print $4" "$10}' ${FILE##*/}  > ${FILE##*/}_correspondance_02.bed
+       sed 's/ /\t/g' ${FILE##*/}_correspondance_02.bed > ${FILE##*/}_base.txt
+done ;
+
+rm *_correspondance*
 
