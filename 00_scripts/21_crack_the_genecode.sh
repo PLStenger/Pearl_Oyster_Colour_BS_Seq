@@ -11,5 +11,5 @@ cd $DATADIRECTORY
 
 $BEDTOOLS_ENV
 
-bedtools intersect -a 3-V-620_cpg_count_info_03.gff -b gencode_03.gff -wa -wb > 3-V-620_cpg_count_gencode.txt
-bedtools intersect -b 3-V-620_cpg_count_info_03.gff -a gencode_03.gff -wa -wb > 3-V-620_cpg_count_gencode_02.txt
+bedtools intersect -a 3-V-620_cpg_count_info_06.gff -b gencode_03.gff -wa -wb > 3-V-620_cpg_count_gencode.txt
+bedtools intersect -b 3-V-620_cpg_count_info_06.gff -a gencode_03.gff -wa -wb > 3-V-620_cpg_count_gencode_02.txt
