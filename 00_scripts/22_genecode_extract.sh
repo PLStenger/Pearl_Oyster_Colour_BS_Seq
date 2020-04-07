@@ -115,21 +115,21 @@ wc -l 3-R-180_cpg_count_gencode.txt >> genecode_all_results.txt
 wc -l 3-R-183_cpg_count_gencode.txt >> genecode_all_results.txt
 wc -l 3-V-613_cpg_count_gencode.txt >> genecode_all_results.txt
 wc -l 3-V-620_cpg_count_gencode.txt >> genecode_all_results.txt
-wc -l 1-J-2_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 1-J-7_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 1-R-180_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 1-R-183_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 1-V-613_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 1-V-620_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-J-2_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-J-7_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-R-180_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-R-183_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-V-613_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 2-V-620_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-J-2_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-J-7_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-R-180_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-R-183_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-V-613_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
-wc -l 3-V-620_cpg_count.txt >> genecode_all_results.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-J-2_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-J-7_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-R-180_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-R-183_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-V-613_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 1-V-620_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-J-2_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-J-7_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-R-180_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-R-183_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-V-613_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 2-V-620_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-J-2_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-J-7_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-R-180_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-R-183_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-V-613_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
+wc -l 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt >> genecode_all_results.txt
