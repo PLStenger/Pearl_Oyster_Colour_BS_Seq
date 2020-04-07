@@ -33,6 +33,6 @@ $BEDTOOLS_ENV
 
 #rm *_correspondance*
 
-bedtools map -a 1-J-2_cpg_count_gencode_02.bed -b Correspondance_scaff_07.gff > 1-J-2_cpg_count_gencode_02_correspondance.bed
+bedtools intersect -a 1-J-2_cpg_count_gencode_02.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-2_cpg_count_gencode_02_correspondance.bed
 
 
