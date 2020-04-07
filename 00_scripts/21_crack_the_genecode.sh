@@ -14,5 +14,8 @@ $BEDTOOLS_ENV
 #bedtools intersect -a 3-V-620_cpg_count_info_07.bed -b gencode_03.bed -wa -wb > 3-V-620_cpg_count_gencode.txt
 #bedtools intersect -b 3-V-620_cpg_count_info_07.bed -a gencode_03.bed -wa -wb > 3-V-620_cpg_count_gencode_02.txt
 
-bedtools intersect -a 3-V-620_cpg_count_info_09.bed -b gencode_04.bed > 3-V-620_cpg_count_gencode.txt
-bedtools intersect -b 3-V-620_cpg_count_info_09.bed -a gencode_04.bed > 3-V-620_cpg_count_gencode_02.txt
+#bedtools intersect -a 3-V-620_cpg_count_info_09.bed -b gencode_04.bed > 3-V-620_cpg_count_gencode.txt
+#bedtools intersect -b 3-V-620_cpg_count_info_09.bed -a gencode_04.bed > 3-V-620_cpg_count_gencode_02.txt
+
+bedtools intersect -b 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt -a gencode_04.bed > 3-V-620_cpg_count_gencode.txt
+
