@@ -8,7 +8,6 @@ DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 cd $DATADIRECTORY
 
 export PATH=$PATH:/appli/anaconda/2.7/bin
-source activate /home1/datawork/plstenge/96_env_conda/freebayes
-
+source activate $DATAWORK/96_env_conda/deeptools
 
 bamCoverage -b Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam -o Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bw
