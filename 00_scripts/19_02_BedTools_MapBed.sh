@@ -37,6 +37,83 @@ $BEDTOOLS_ENV
 
 #bedtools map -b 3-J-7_04.bed -a Correspondance_scaff_08.gff > 3-J-7_04_correspondance.bed
 
-bedtools intersect -a 3-J-7_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-7_04_correspondance.bed
+#bedtools intersect -a 3-J-7_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-7_04_correspondance.bed
 
+
+########################### in local: From the BedGraph files, create bed files
+
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-V-620.bed > /Users/pierre-louisstenger/Desktop/bed/3-V-620.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-J-7.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-J-7.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-R-180.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-R-180.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-R-183.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-R-183.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-V-613.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-V-613.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-V-620.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-V-620.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-J-2.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-J-2.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-J-7.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-J-7.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-R-180.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-R-180.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-R-183.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-R-183.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-V-613.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-V-613.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/2-V-620.bedGraph > /Users/pierre-louisstenger/Desktop/bed/2-V-620.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-J-2.bedGraph > /Users/pierre-louisstenger/Desktop/bed/3-J-2.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-J-7.bedGraph > /Users/pierre-louisstenger/Desktop/bed/3-J-7.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-R-180.bedGraph > /Users/pierre-louisstenger/Desktop/bed/3-R-180.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-R-183.bedGraph > /Users/pierre-louisstenger/Desktop/bed/3-R-183.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/3-V-613.bedGraph > /Users/pierre-louisstenger/Desktop/bed/3-V-613.bed
+#awk '{print $1"\t"$2"\t"$3"\t"$4}' /Users/pierre-louisstenger/CARNATION/Thèse/BS-Seq/08\ -\ IGV/Bed/1-J-2.bedGraph > /Users/pierre-louisstenger/Desktop/bed/1-J-2.bed
+
+############### In cluster
+
+
+bedtools intersect -a 3-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-620_correspondance.bed
+bedtools intersect -a 1-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-7_correspondance.bed
+bedtools intersect -a 1-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-180_correspondance.bed
+bedtools intersect -a 1-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-183_correspondance.bed
+bedtools intersect -a 1-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-613_correspondance.bed
+bedtools intersect -a 1-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-620_correspondance.bed
+bedtools intersect -a 2-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-2_correspondance.bed
+bedtools intersect -a 2-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-7_correspondance.bed
+bedtools intersect -a 2-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-180_correspondance.bed
+bedtools intersect -a 2-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-183_correspondance.bed
+bedtools intersect -a 2-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-613_correspondance.bed
+bedtools intersect -a 2-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-620_correspondance.bed
+bedtools intersect -a 3-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-2_correspondance.bed
+bedtools intersect -a 3-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-7_correspondance.bed
+bedtools intersect -a 3-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-180_correspondance.bed
+bedtools intersect -a 3-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-183_correspondance.bed
+bedtools intersect -a 3-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-613_correspondance.bed
+bedtools intersect -a 1-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-2_correspondance.bed
+
+awk '{print $9"\t"$5}' 3-V-620_correspondance.bed > 3-V-620_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-J-7_correspondance.bed > 1-J-7_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-R-180_correspondance.bed > 1-R-180_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-R-183_correspondance.bed > 1-R-183_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-V-613_correspondance.bed > 1-V-613_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-V-620_correspondance.bed > 1-V-620_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-J-2_correspondance.bed > 2-J-2_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-J-7_correspondance.bed > 2-J-7_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-R-180_correspondance.bed > 2-R-180_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-R-183_correspondance.bed > 2-R-183_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-V-613_correspondance.bed > 2-V-613_correspondance_02.bed
+awk '{print $9"\t"$5}' 2-V-620_correspondance.bed > 2-V-620_correspondance_02.bed
+awk '{print $9"\t"$5}' 3-J-2_correspondance.bed > 3-J-2_correspondance_02.bed
+awk '{print $9"\t"$5}' 3-J-7_correspondance.bed > 3-J-7_correspondance_02.bed
+awk '{print $9"\t"$5}' 3-R-180_correspondance.bed > 3-R-180_correspondance_02.bed
+awk '{print $9"\t"$5}' 3-R-183_correspondance.bed > 3-R-183_correspondance_02.bed
+awk '{print $9"\t"$5}' 3-V-613_correspondance.bed > 3-V-613_correspondance_02.bed
+awk '{print $9"\t"$5}' 1-J-2_correspondance.bed > 1-J-2_correspondance_02.bed
+
+
+for FILE in $(ls $DATADIRECTORY/*_correspondance_02.bed)
+do
+
+# count the number of position for each gene
+awk -F '\t' '{print $1}' ${FILE##*/} | sort | uniq -c > ${FILE##*/}_mean_02.txt
+# sum of the value for each gene
+awk -F '\t' '{a[$1] += $2} END{for (i in a) print i, a[i]}' ${FILE##*/} | sort > ${FILE##*/}_mean_01.txt
+# merge the data frame
+paste ${FILE##*/}_mean_01.txt ${FILE##*/}_mean_02.txt > ${FILE##*/}_mean_03.txt
+# calculate the means for GBM
+awk '{print $1"\t"$2/$3}' ${FILE##*/}_mean_03.txt > ${FILE##*/}_GBM.txt
+
+done ;
 
