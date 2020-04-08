@@ -64,24 +64,81 @@ $BEDTOOLS_ENV
 ############### In cluster
 
 
-bedtools intersect -a 3-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-620_correspondance.bed
-bedtools intersect -a 1-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-7_correspondance.bed
-bedtools intersect -a 1-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-180_correspondance.bed
-bedtools intersect -a 1-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-183_correspondance.bed
-bedtools intersect -a 1-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-613_correspondance.bed
-bedtools intersect -a 1-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-620_correspondance.bed
-bedtools intersect -a 2-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-2_correspondance.bed
-bedtools intersect -a 2-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-7_correspondance.bed
-bedtools intersect -a 2-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-180_correspondance.bed
-bedtools intersect -a 2-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-183_correspondance.bed
-bedtools intersect -a 2-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-613_correspondance.bed
-bedtools intersect -a 2-V-620.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-620_correspondance.bed
-bedtools intersect -a 3-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-2_correspondance.bed
-bedtools intersect -a 3-J-7.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-7_correspondance.bed
-bedtools intersect -a 3-R-180.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-180_correspondance.bed
-bedtools intersect -a 3-R-183.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-183_correspondance.bed
-bedtools intersect -a 3-V-613.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-613_correspondance.bed
-bedtools intersect -a 1-J-2.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-2_correspondance.bed
+sed '1d' 3-V-620.bed > 3-V-620_02.bed
+sed '1d' 1-J-7.bed > 1-J-7_02.bed
+sed '1d' 1-R-180.bed > 1-R-180_02.bed
+sed '1d' 1-R-183.bed > 1-R-183_02.bed
+sed '1d' 1-V-613.bed > 1-V-613_02.bed
+sed '1d' 1-V-620.bed > 1-V-620_02.bed
+sed '1d' 2-J-2.bed > 2-J-2_02.bed
+sed '1d' 2-J-7.bed > 2-J-7_02.bed
+sed '1d' 2-R-180.bed > 2-R-180_02.bed
+sed '1d' 2-R-183.bed > 2-R-183_02.bed
+sed '1d' 2-V-613.bed > 2-V-613_02.bed
+sed '1d' 2-V-620.bed > 2-V-620_02.bed
+sed '1d' 3-J-2.bed > 3-J-2_02.bed
+sed '1d' 3-J-7.bed > 3-J-7_02.bed
+sed '1d' 3-R-180.bed > 3-R-180_02.bed
+sed '1d' 3-R-183.bed > 3-R-183_02.bed
+sed '1d' 3-V-613.bed > 3-V-613_02.bed
+sed '1d' 1-J-2.bed > 1-J-2_02.bed
+
+sed 's/|size/_/g' 3-V-620_02.bed > 3-V-620_03.bed
+sed 's/|size/_/g' 1-J-7_02.bed > 1-J-7_03.bed
+sed 's/|size/_/g' 1-R-180_02.bed > 1-R-180_03.bed
+sed 's/|size/_/g' 1-R-183_02.bed > 1-R-183_03.bed
+sed 's/|size/_/g' 1-V-613_02.bed > 1-V-613_03.bed
+sed 's/|size/_/g' 1-V-620_02.bed > 1-V-620_03.bed
+sed 's/|size/_/g' 2-J-2_02.bed > 2-J-2_03.bed
+sed 's/|size/_/g' 2-J-7_02.bed > 2-J-7_03.bed
+sed 's/|size/_/g' 2-R-180_02.bed > 2-R-180_03.bed
+sed 's/|size/_/g' 2-R-183_02.bed > 2-R-183_03.bed
+sed 's/|size/_/g' 2-V-613_02.bed > 2-V-613_03.bed
+sed 's/|size/_/g' 2-V-620_02.bed > 2-V-620_03.bed
+sed 's/|size/_/g' 3-J-2_02.bed > 3-J-2_03.bed
+sed 's/|size/_/g' 3-J-7_02.bed > 3-J-7_03.bed
+sed 's/|size/_/g' 3-R-180_02.bed > 3-R-180_03.bed
+sed 's/|size/_/g' 3-R-183_02.bed > 3-R-183_03.bed
+sed 's/|size/_/g' 3-V-613_02.bed > 3-V-613_03.bed
+sed 's/|size/_/g' 1-J-2_02.bed > 1-J-2_03.bed
+
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-V-620_03.bed > 3-V-620_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-J-7_03.bed > 1-J-7_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-R-180_03.bed > 1-R-180_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-R-183_03.bed > 1-R-183_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-V-613_03.bed > 1-V-613_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-V-620_03.bed > 1-V-620_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-J-2_03.bed > 2-J-2_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-J-7_03.bed > 2-J-7_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-R-180_03.bed > 2-R-180_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-R-183_03.bed > 2-R-183_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-V-613_03.bed > 2-V-613_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 2-V-620_03.bed > 2-V-620_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-J-2_03.bed > 3-J-2_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-J-7_03.bed > 3-J-7_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-R-180_03.bed > 3-R-180_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-R-183_03.bed > 3-R-183_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 3-V-613_03.bed > 3-V-613_04.bed
+awk '{print $1"\t"$2"\t"$3"\t"$1"\t"$4}' 1-J-2_03.bed > 1-J-2_04.bed
+
+bedtools intersect -a 3-V-620_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-620_correspondance.bed
+bedtools intersect -a 1-J-7_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-7_correspondance.bed
+bedtools intersect -a 1-R-180_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-180_correspondance.bed
+bedtools intersect -a 1-R-183_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-R-183_correspondance.bed
+bedtools intersect -a 1-V-613_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-613_correspondance.bed
+bedtools intersect -a 1-V-620_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-V-620_correspondance.bed
+bedtools intersect -a 2-J-2_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-2_correspondance.bed
+bedtools intersect -a 2-J-7_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-J-7_correspondance.bed
+bedtools intersect -a 2-R-180_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-180_correspondance.bed
+bedtools intersect -a 2-R-183_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-R-183_correspondance.bed
+bedtools intersect -a 2-V-613_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-613_correspondance.bed
+bedtools intersect -a 2-V-620_04.bed -b Correspondance_scaff_07.gff -wa -wb > 2-V-620_correspondance.bed
+bedtools intersect -a 3-J-2_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-2_correspondance.bed
+bedtools intersect -a 3-J-7_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-J-7_correspondance.bed
+bedtools intersect -a 3-R-180_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-180_correspondance.bed
+bedtools intersect -a 3-R-183_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-R-183_correspondance.bed
+bedtools intersect -a 3-V-613_04.bed -b Correspondance_scaff_07.gff -wa -wb > 3-V-613_correspondance.bed
+bedtools intersect -a 1-J-2_04.bed -b Correspondance_scaff_07.gff -wa -wb > 1-J-2_correspondance.bed
 
 awk '{print $9"\t"$5}' 3-V-620_correspondance.bed > 3-V-620_correspondance_02.bed
 awk '{print $9"\t"$5}' 1-J-7_correspondance.bed > 1-J-7_correspondance_02.bed
