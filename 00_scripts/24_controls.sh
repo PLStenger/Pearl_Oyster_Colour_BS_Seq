@@ -11,7 +11,7 @@ cd $DATADIRECTORY
 $BEDTOOLS_ENV
 
 
-bedtools intersect -a selected.gff -b Correspondance_scaff_07.gff -wa -wb > selected_corresp.txt
-bedtools intersect -b selected.gff -a Correspondance_scaff_07.gff -wa -wb > selected_corresp_02.txt
+bedtools intersect -a selected_02.gff -b Correspondance_scaff_07.gff -wa -wb > selected_corresp.txt
+bedtools intersect -b selected_02.gff -a Correspondance_scaff_07.gff -wa -wb > selected_corresp_02.txt
 
 
