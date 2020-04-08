@@ -3,7 +3,7 @@
 #PBS -l walltime=48:00:00
 #PBS -l select=1:ncpus=28:mem=115g
 
-cd /home1/datawork/plstenge/Pearl_Oyster_Colour_Population_Genomics/01_data
+cd /home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
 
 awk '
     # { sub(/\r$/,"") }    # uncomment to remove Windows style line-endings.
