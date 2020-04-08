@@ -4,7 +4,7 @@
 #PBS -l select=1:ncpus=28:mem=115g
 
 DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
-REFERENCE=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome/sspace.final.scaffolds_no_pipe_size.gff
+REFERENCE=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/01_genome/sspace.final.scaffolds_no_pipe_size.bed
 
 cd $DATADIRECTORY
 
