@@ -11,4 +11,4 @@ SAMTOOLS="samtools"
 $SAMTOOLS_ENV
 cd $DATADIRECTORY
 
-samtools index Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam
+samtools index Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam Index_10.2-V-620_R1_paired_bismark_bt2_pe.deduplicated.bam.sam_sorted_clean.bam.bai
