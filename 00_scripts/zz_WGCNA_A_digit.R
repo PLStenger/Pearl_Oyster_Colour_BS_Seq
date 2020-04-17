@@ -224,9 +224,9 @@ save(sft,file="sft_signed.Rda")
 #  gcInterval = NULL,
 #  verbose = 0, indent = 0)
 
-softPower = 20; #reached 90 R2 # Here 20 = 0.80237680
+#softPower = 20; #reached 90 R2 # Here 20 = 0.80237680
  #Error in cor_mat^power : non-numeric argument to binary operator
-adjacency = adjacency(datExpr, power = "softPower", type="signed"); # Error in cor_mat^power : non-numeric argument to binary operator
+#adjacency = adjacency(datExpr, power = "softPower", type="signed"); # Error in cor_mat^power : non-numeric argument to binary operator
 
 
 # --> Error in cor_mat^power : non-numeric argument to binary operator
