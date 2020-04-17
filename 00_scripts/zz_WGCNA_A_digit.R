@@ -209,7 +209,7 @@ plot(sft$fitIndices[,1], sft$fitIndices[,5],
      main = paste("Mean connectivity"))
 text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 save(sft,file="sft_signed.Rda")
-View(sft$fitIndices)
+#View(sft$fitIndices)
 
 #pickSoftThreshold(
 #  datExpr, 
