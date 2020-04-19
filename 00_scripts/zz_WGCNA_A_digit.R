@@ -179,9 +179,9 @@ options(stringsAsFactors = FALSE);
 # See note above.
 #enableWGCNAThreads()
 # Load the data saved in the first part
-lnames = load(file = "dataInput_subset.Rda");
+#lnames = load(file = "dataInput_subset.Rda");
 #The variable lnames contains the names of loaded variables.
-lnames
+#lnames
 
 # Very important for sft !!
 allowWGCNAThreads() 
@@ -239,49 +239,53 @@ load(file = "dataInput_subset.Rda")
 load(file = "sft_signed.Rda")
 
 
-#s.th=18 # re-specify according to previous section
-s.th=20 # re-specify according to previous section
-# the following two lines take a long time, prepare to wait 15-20 min
-# (if you don;t want to wait but proceed with exercise, skip to next section - we have results of this one recorded already)
-adjacency = adjacency(datExpr, power = s.th, type="signed");
-save(adjacency,file="adjacency.RData")
-
-TOM = TOMsimilarity(adjacency,TOMType="signed");
-dissTOM = 1-TOM
-save(adjacency, TOM, dissTOM, file="adjacency_2.RData")
-# Call the hierarchical clustering function
-geneTree = flashClust(as.dist(dissTOM), method = "average");
-
-# We like large modules, so we set the minimum module size relatively high:
-minModuleSize = 30; 
-dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
-                            deepSplit = 2, pamRespectsDendro = FALSE,
-                            minClusterSize = minModuleSize);
-dynamicColors = labels2colors(dynamicMods)
-table(dynamicColors)
-
-datt = datExpr
-
-# Calculate eigengenes
-MEList = moduleEigengenes(datt, colors = dynamicColors)
-MEs = MEList$eigengenes
-# Calculate dissimilarity of module eigengenes
-MEDiss = 1-cor(MEs);
-METree = flashClust(as.dist(MEDiss), method = "average");
-
-save(dynamicMods,dynamicColors,MEs,METree,geneTree,file="1stPassModules.RData")
+##s.th=18 # re-specify according to previous section
+#s.th=20 # re-specify according to previous section
+## the following two lines take a long time, prepare to wait 15-20 min
+## (if you don;t want to wait but proceed with exercise, skip to next section - we have results of this one recorded already)
+#adjacency = adjacency(datExpr, power = s.th, type="signed");
+#save(adjacency,file="adjacency.RData")
+#
+#TOM = TOMsimilarity(adjacency,TOMType="signed");
+#dissTOM = 1-TOM
+#save(adjacency, TOM, dissTOM, file="adjacency_2.RData")
+## Call the hierarchical clustering function
+#geneTree = flashClust(as.dist(dissTOM), method = "average");
+#
+## We like large modules, so we set the minimum module size relatively high:
+#minModuleSize = 30; 
+#dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
+#                            deepSplit = 2, pamRespectsDendro = FALSE,
+#                            minClusterSize = minModuleSize);
+#dynamicColors = labels2colors(dynamicMods)
+#table(dynamicColors)
+#
+#datt = datExpr
+#
+## Calculate eigengenes
+#MEList = moduleEigengenes(datt, colors = dynamicColors)
+#MEs = MEList$eigengenes
+## Calculate dissimilarity of module eigengenes
+#MEDiss = 1-cor(MEs);
+#METree = flashClust(as.dist(MEDiss), method = "average");
+#
+#save(dynamicMods,dynamicColors,MEs,METree,geneTree,file="1stPassModules.RData")
 
 #########################
 # merging modules:
 
+load('adjacency.RData')
+load('adjacency_2.RData')
+load('1stPassModules.RData')
+
 mm=load('1stPassModules.RData')
 mm
 library(WGCNA)
-lnames=load('wgcnaData.RData')
+#lnames=load('wgcnaData.RData')
 # traits
 # head(datt)
 
-quartz()
+#quartz()
 
 MEDissThres = 0.35 # in the first pass, set this to 0 - no merging (we want to see the module-traits heatmap first, then decide which modules are telling us the same story and better be merged)
 sizeGrWindow(7, 6)
@@ -298,7 +302,7 @@ mergedColors = merge$colors;
 mergedMEs = merge$newMEs
 
 # plotting the fabulous ridiculogram
-quartz()
+#quartz()
 plotDendroAndColors(geneTree, cbind(dynamicColors, mergedColors),
                     c("Dynamic Tree Cut", "Merged dynamic"),
                     dendroLabels = FALSE, hang = 0.03,
@@ -312,7 +316,7 @@ moduleLabels = match(moduleColors, colorOrder)-1;
 MEs = mergedMEs;
 
 # Calculate dissimilarity of module eigengenes
-quartz()
+#quartz()
 MEDiss = 1-cor(MEs);
 # Cluster module eigengenes
 METree = flashClust(as.dist(MEDiss), method = "average");
@@ -329,7 +333,7 @@ save(MEs, geneTree, moduleLabels, moduleColors, file = "networkdata_signed.RData
 ###################
 # plotting correlations with traits:
 load(file = "networkdata_signed.RData")
-load(file = "wgcnaData.RData")
+#load(file = "wgcnaData.RData")
 
 # Define numbers of genes and samples
 nGenes = ncol(datt);
@@ -363,7 +367,7 @@ moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples);
 # main = paste("Gene-trait relationships"))
 
 # module-trait correlations
-quartz()
+#quartz()
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "");
 dim(textMatrix) = dim(moduleTraitCor)
@@ -395,7 +399,7 @@ print(data.frame(table(moduleColors))) # gives numbers of genes in each module
 # scatterplots of gene significance (correlation-based) vs kME
 
 load(file = "networkdata_signed.RData")
-load(file = "wgcnaData.RData");
+#load(file = "wgcnaData.RData");
 traits
 table(moduleColors)
 whichTrait="Stress"
@@ -414,13 +418,13 @@ geneTraitSignificance = as.data.frame(cor(datt, selTrait, use = "p"));
 GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples));
 names(geneTraitSignificance) = paste("GS.", names(selTrait), sep="");
 names(GSPvalue) = paste("p.GS.", names(selTrait), sep="");
-quartz()
+#quartz()
 par(mfrow=c(3,3))
 counter=0
 for(module in modNames[1:length(modNames)]){
   counter=counter+1
   if (counter>9) {
-    quartz()
+    #quartz()
     par(mfrow=c(3,3))
     counter=1
   }
@@ -439,12 +443,12 @@ for(module in modNames[1:length(modNames)]){
 # note: this part does not make much sense for unsigned modules
 
 load(file = "networkdata_signed.RData")
-load(file = "wgcnaData.RData");
+#load(file = "wgcnaData.RData");
 
 which.module="darkturquoise" 
 datME=MEs
 datExpr=datt
-quartz()
+#quartz()
 ME=datME[, paste("ME",which.module, sep="")]
 par(mfrow=c(2,1), mar=c(0.3, 5.5, 3, 2))
 plotMat(t(scale(datExpr[,moduleColors==which.module ]) ),
@@ -461,8 +465,8 @@ length(datExpr[1,moduleColors==which.module ]) # number of genes in chosen modul
 
 library(WGCNA)
 load(file = "networkdata_signed.RData") # moduleColors, MEs
-load(file = "wgcnaData.RData") # vsd table
-load(file = "../data4wgcna.RData") # vsd table
+#load(file = "wgcnaData.RData") # vsd table
+#load(file = "../data4wgcna.RData") # vsd table
 
 # calculating modul memberships for all genes for all modules
 allkME =as.data.frame(signedKME(datt, MEs)) 
@@ -480,7 +484,7 @@ write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 # plotting heatmap for named top-kME genes
 
 load(file = "networkdata_signed.RData")
-load(file = "wgcnaData.RData");
+#load(file = "wgcnaData.RData");
 allkME =as.data.frame(signedKME(datt, MEs))
 gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
 library(pheatmap)
