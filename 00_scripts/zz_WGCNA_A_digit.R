@@ -260,7 +260,7 @@ load(file = "sft_signed.Rda")
 #dynamicColors = labels2colors(dynamicMods)
 #table(dynamicColors)
 #
-#datt = datExpr
+datt = datExpr
 #
 ## Calculate eigengenes
 #MEList = moduleEigengenes(datt, colors = dynamicColors)
