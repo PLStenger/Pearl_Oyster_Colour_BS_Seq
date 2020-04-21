@@ -375,8 +375,8 @@ dim(textMatrix) = dim(moduleTraitCor)
 print("table moduleColor before the labeledHeatmap")
 print(data.frame(table(moduleColors))) # gives numbers of genes in each module
 
-#par(mar = c(6, 8.5, 3, 3));
-par(mar = c(4, 5, 4, 6));
+sizeGrWindow(9,7)
+par(mar = c(6, 8.5, 3, 3));
 # Display the correlation values within a heatmap plot
 labeledHeatmap(Matrix = moduleTraitCor,
                xLabels = names(datTraits),
@@ -390,7 +390,7 @@ labeledHeatmap(Matrix = moduleTraitCor,
                zlim = c(-1,1),
                main = paste("Module-trait relationships"))
 
-print(data.frame(table(moduleColors))) # gives numbers of genes in each module
+#print(data.frame(table(moduleColors))) # gives numbers of genes in each module
 
 # if it was first pass with no module merging, this is where you examine your heatmap
 # and dendrogram of module eigengenes to see where you would like to see 
