@@ -346,7 +346,7 @@ MEs = orderMEs(MEs0)
 moduleGeneCor=cor(MEs,datt)
 moduleGenePvalue = corPvalueStudent(moduleGeneCor, nSamples);
 
-moduleTraitCor = cor(MEs, traits, use = "p");
+moduleTraitCor = cor(MEs, datTraits, use = "p");
 moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples);
 
 # gene-trait correlations - a gene-by-gene heatmap corresponding to the droopy tree 
@@ -374,7 +374,7 @@ dim(textMatrix) = dim(moduleTraitCor)
 par(mar = c(6, 8.5, 3, 3));
 # Display the correlation values within a heatmap plot
 labeledHeatmap(Matrix = moduleTraitCor,
-               xLabels = names(traits),
+               xLabels = names(datTraits),
                yLabels = names(MEs),
                ySymbols = names(MEs),
                colorLabels = FALSE,
@@ -400,13 +400,13 @@ print(data.frame(table(moduleColors))) # gives numbers of genes in each module
 
 load(file = "networkdata_signed.RData")
 #load(file = "wgcnaData.RData");
-traits
+datTraits
 table(moduleColors)
 whichTrait="Stress"
 
 nGenes = ncol(datt);
 nSamples = nrow(datt);
-selTrait = as.data.frame(traits[,whichTrait]);
+selTrait = as.data.frame(datTraits[,whichTrait]);
 names(selTrait) = whichTrait
 # names (colors) of the modules
 modNames = substring(names(MEs), 3)
