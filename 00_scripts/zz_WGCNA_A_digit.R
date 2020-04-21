@@ -371,7 +371,12 @@ moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples);
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "");
 dim(textMatrix) = dim(moduleTraitCor)
+
+print("table moduleColor before the labeledHeatmap")
+print(data.frame(table(moduleColors))) # gives numbers of genes in each module
+
 #par(mar = c(6, 8.5, 3, 3));
+par(mar = c(4, 5, 4, 6));
 # Display the correlation values within a heatmap plot
 labeledHeatmap(Matrix = moduleTraitCor,
                xLabels = names(datTraits),
@@ -402,7 +407,7 @@ load(file = "networkdata_signed.RData")
 #load(file = "wgcnaData.RData");
 datTraits
 table(moduleColors)
-whichTrait="Stress"
+whichTrait="Acclimation"
 
 nGenes = ncol(datt);
 nSamples = nrow(datt);
