@@ -151,18 +151,18 @@ collectGarbage();
 
 
 # Re-cluster samples
-sampleTree2 = hclust(dist(datExpr), method = "average")
+#sampleTree2 = hclust(dist(datExpr), method = "average")
 # Convert traits to a color representation: white means low, red means high, grey means missing entry
 traitColors = numbers2colors(datTraits,signed= FALSE);
 # Plot the sample dendrogram and the colors underneath.
-pdf("dendo_heatmap.pdf",width=12,height=9)
-par(mar=c(1, 10, 1, 1))
-plotDendroAndColors(sampleTree2, traitColors,
-                    groupLabels = names(datTraits), 
-                    main = "Sample dendrogram and trait heatmap")
+#pdf("dendo_heatmap.pdf",width=12,height=9)
+#par(mar=c(1, 10, 1, 1))
+#plotDendroAndColors(sampleTree2, traitColors,
+#                    groupLabels = names(datTraits), 
+#                    main = "Sample dendrogram and trait heatmap")
 
-dev.off()
-
+#dev.off()
+#
 
 save(datExpr, datTraits, file = "dataInput_subset.Rda")
 
@@ -186,29 +186,29 @@ options(stringsAsFactors = FALSE);
 # Very important for sft !!
 allowWGCNAThreads() 
 
-load(file = "dataInput_subset.Rda")
+#load(file = "dataInput_subset.Rda")
 # Choose a set of soft-thresholding powers
-powers = c(c(1:10), seq(from = 10, to=24, by=2))
+#powers = c(c(1:10), seq(from = 10, to=24, by=2))
 # Call the network topology analysis function
-sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5,networkType="signed")
+#sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5,networkType="signed")
 # Plot the results:
-sizeGrWindow(9, 5)
-par(mfrow = c(1,2));
-cex1 = 0.9;
+#sizeGrWindow(9, 5)
+#par(mfrow = c(1,2));
+#cex1 = 0.9;
 # Scale-free topology fit index as a function of the soft-thresholding power
-plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
-     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
-     main = paste("Scale independence"));
-text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
-     labels=powers,cex=cex1,col="red");
+#plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+#     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
+#     main = paste("Scale independence"));
+#text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+#     labels=powers,cex=cex1,col="red");
 # this line corresponds to using an R^2 cut-off of h
-abline(h=0.84,col="red") 
+#abline(h=0.84,col="red") 
 # Mean connectivity as a function of the soft-thresholding power
-plot(sft$fitIndices[,1], sft$fitIndices[,5],
-     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
-     main = paste("Mean connectivity"))
-text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
-save(sft,file="sft_signed.Rda")
+#plot(sft$fitIndices[,1], sft$fitIndices[,5],
+#     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
+#     main = paste("Mean connectivity"))
+#text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
+#save(sft,file="sft_signed.Rda")
 #View(sft$fitIndices)
 
 #pickSoftThreshold(
@@ -371,7 +371,7 @@ moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples);
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "");
 dim(textMatrix) = dim(moduleTraitCor)
-par(mar = c(6, 8.5, 3, 3));
+#par(mar = c(6, 8.5, 3, 3));
 # Display the correlation values within a heatmap plot
 labeledHeatmap(Matrix = moduleTraitCor,
                xLabels = names(datTraits),
