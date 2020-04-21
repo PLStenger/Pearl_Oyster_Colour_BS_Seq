@@ -477,7 +477,7 @@ load(file = "networkdata_signed.RData") # moduleColors, MEs
 allkME =as.data.frame(signedKME(datt, MEs)) 
 names(allkME)=gsub("kME","",names(allkME))
 
-whichModule="darkslateblue"
+whichModule="darkturquoise"
 table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
