@@ -482,7 +482,7 @@ table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
 inModuleBinary=as.numeric(moduleColors==whichModule)
-combo=data.frame("gene"=row.names(vsd.wg),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
+combo=data.frame("gene"=row.names(datExpr),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
 write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 
 ################
@@ -500,7 +500,7 @@ top=30 # number of named top-kME genes to plot
 datME=MEs
 datExpr=datt
 modcol=paste("kME",whichModule,sep="")
-sorted=vsd.wg[order(allkME[,modcol],decreasing=T),]
+sorted=datExpr[order(allkME[,modcol],decreasing=T),]
 head(sorted)
 # selection top N names genes, attaching gene names
 gnames=c();counts=0;hubs=c()
