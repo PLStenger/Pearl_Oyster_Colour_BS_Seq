@@ -482,14 +482,14 @@ table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
 inModuleBinary=as.numeric(moduleColors==whichModule)
-combo=data.frame("gene"=row.names(datExpr),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
+combo=data.frame("gene"=row.names(logcpm_test),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
 write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 
 ################
 # plotting heatmap for named top-kME genes
 
 load(file = "networkdata_signed.RData")
-#load(file = "wgcnaData.RData");
+load(file = "wgcnaData.RData");
 allkME =as.data.frame(signedKME(datt, MEs))
 gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
 library(pheatmap)
@@ -500,22 +500,22 @@ top=30 # number of named top-kME genes to plot
 datME=MEs
 datExpr=datt
 modcol=paste("kME",whichModule,sep="")
-sorted=datExpr[order(allkME[,modcol],decreasing=T),]
+sorted=logcpm_test[order(allkME[,modcol],decreasing=T),]
 head(sorted)
 # selection top N names genes, attaching gene names
 gnames=c();counts=0;hubs=c()
 for(i in 1:length(sorted[,1])) {
-  if (row.names(sorted)[i] %in% gg$V1) { 
-    counts=counts+1
-    gn=gg[gg$V1==row.names(sorted)[i],2]
-    gn=paste(gn,row.names(sorted)[i],sep=".")
-    if (gn %in% gnames) {
-      gn=paste(gn,counts,sep=".")
-    }
-    gnames=append(gnames,gn) 
-    hubs=data.frame(rbind(hubs,sorted[i,]))
-    if (counts==top) {break}
-  }
+	if (row.names(sorted)[i] %in% gg$V1) { 
+		counts=counts+1
+		gn=gg[gg$V1==row.names(sorted)[i],2]
+		gn=paste(gn,row.names(sorted)[i],sep=".")
+		if (gn %in% gnames) {
+			gn=paste(gn,counts,sep=".")
+		}
+		gnames=append(gnames,gn) 
+		hubs=data.frame(rbind(hubs,sorted[i,]))
+		if (counts==top) {break}
+	}
 } 
 row.names(hubs)=gnames
 
@@ -524,3 +524,4 @@ contrasting2 = colorRampPalette(rev(c("chocolate1","chocolate1","#FEE090","grey1
 contrasting3 = colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan","cyan")))(100)
 
 pheatmap(hubs,scale="row",col=contrasting2,border_color=NA,treeheight_col=0,cex=0.9,cluster_rows=F)
+
