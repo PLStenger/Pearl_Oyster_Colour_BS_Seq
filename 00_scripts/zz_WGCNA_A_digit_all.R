@@ -172,107 +172,107 @@ save(datExpr, datTraits, file = "dataInput_subset.Rda")
 
 #setting is important, do not omit.
 options(stringsAsFactors = FALSE);
-# Allow multi-threading within WGCNA. At present this call is necessary.
-# Any error here may be ignored but you may want to update WGCNA if you see one.
-# Caution: skip this line if you run RStudio or other third-party R environments.
-# See note above.
-#enableWGCNAThreads()
-# Load the data saved in the first part
-lnames = load(file = "dataInput_subset.Rda");
-#The variable lnames contains the names of loaded variables.
-lnames
-
-# Very important for sft !!
-allowWGCNAThreads() 
-
-load(file = "dataInput_subset.Rda")
-# Choose a set of soft-thresholding powers
-powers = c(c(1:10), seq(from = 10, to=24, by=2))
-# Call the network topology analysis function
-sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5,networkType="signed")
-# Plot the results:
-sizeGrWindow(9, 5)
-par(mfrow = c(1,2));
-cex1 = 0.9;
-# Scale-free topology fit index as a function of the soft-thresholding power
-plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
-     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
-     main = paste("Scale independence"));
-text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
-     labels=powers,cex=cex1,col="red");
-# this line corresponds to using an R^2 cut-off of h
-abline(h=0.84,col="red") 
-# Mean connectivity as a function of the soft-thresholding power
-plot(sft$fitIndices[,1], sft$fitIndices[,5],
-     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
-     main = paste("Mean connectivity"))
-text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
-
-
-
-save(sft,file="sft_signed.Rda")
-#View(sft$fitIndices)
-
-#pickSoftThreshold(
-#  datExpr, 
-#  dataIsExpr = TRUE,
-#  weights = NULL,
-#  RsquaredCut = 0.85, 
-#  powerVector = c(seq(1, 10, by = 1), seq(12, 20, by = 2)), 
-#  removeFirst = FALSE, nBreaks = 10, blockSize = NULL, 
-#  corFnc = cor, corOptions = list(use = 'p'), 
-#  networkType = "unsigned",
-#  moreNetworkConcepts = FALSE,
-#  gcInterval = NULL,
-#  verbose = 0, indent = 0)
-
-#softPower = 20; #reached 90 R2 # Here 20 = 0.80237680
- #Error in cor_mat^power : non-numeric argument to binary operator
-#adjacency = adjacency(datExpr, power = "softPower", type="signed"); # Error in cor_mat^power : non-numeric argument to binary operator
-
-
-# --> Error in cor_mat^power : non-numeric argument to binary operator
-
-
-#####################
-# making modules
-
-load(file = "dataInput_subset.Rda")
-load(file = "sft_signed.Rda")
-
-
-##s.th=18 # re-specify according to previous section
-s.th=6 # re-specify according to previous section
-## the following two lines take a long time, prepare to wait 15-20 min
-## (if you don;t want to wait but proceed with exercise, skip to next section - we have results of this one recorded already)
-adjacency = adjacency(datExpr, power = s.th, type="signed");
-
-save(adjacency,file="adjacency.RData")
-
-TOM = TOMsimilarity(adjacency,TOMType="signed");
-dissTOM = 1-TOM
-save(adjacency, TOM, dissTOM, file="adjacency_2.RData")
-# Call the hierarchical clustering function
-geneTree = flashClust(as.dist(dissTOM), method = "average");
-
-# We like large modules, so we set the minimum module size relatively high:
-minModuleSize = 30; 
-dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
-                            deepSplit = 2, pamRespectsDendro = FALSE,
-                            minClusterSize = minModuleSize);
-dynamicColors = labels2colors(dynamicMods)
-table(dynamicColors)
-
-datt = datExpr
-
-# Calculate eigengenes
-MEList = moduleEigengenes(datt, colors = dynamicColors)
-MEs = MEList$eigengenes
-# Calculate dissimilarity of module eigengenes
-MEDiss = 1-cor(MEs);
-METree = flashClust(as.dist(MEDiss), method = "average");
-
-save(dynamicMods,dynamicColors,MEs,METree,geneTree,file="1stPassModules.RData")
+## Allow multi-threading within WGCNA. At present this call is necessary.
+## Any error here may be ignored but you may want to update WGCNA if you see one.
+## Caution: skip this line if you run RStudio or other third-party R environments.
+## See note above.
+##enableWGCNAThreads()
+## Load the data saved in the first part
+#lnames = load(file = "dataInput_subset.Rda");
+##The variable lnames contains the names of loaded variables.
+#lnames
+#
+## Very important for sft !!
+#allowWGCNAThreads() 
+#
+#load(file = "dataInput_subset.Rda")
+## Choose a set of soft-thresholding powers
+#powers = c(c(1:10), seq(from = 10, to=24, by=2))
+## Call the network topology analysis function
+#sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5,networkType="signed")
+## Plot the results:
+#sizeGrWindow(9, 5)
+#par(mfrow = c(1,2));
+#cex1 = 0.9;
+## Scale-free topology fit index as a function of the soft-thresholding power
+#plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+#     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
+#     main = paste("Scale independence"));
+#text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+#     labels=powers,cex=cex1,col="red");
+## this line corresponds to using an R^2 cut-off of h
+#abline(h=0.84,col="red") 
+## Mean connectivity as a function of the soft-thresholding power
+#plot(sft$fitIndices[,1], sft$fitIndices[,5],
+#     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
+#     main = paste("Mean connectivity"))
+#text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
+#
+#
+#
+#save(sft,file="sft_signed.Rda")
+##View(sft$fitIndices)
+#
+##pickSoftThreshold(
+##  datExpr, 
+##  dataIsExpr = TRUE,
+##  weights = NULL,
+##  RsquaredCut = 0.85, 
+##  powerVector = c(seq(1, 10, by = 1), seq(12, 20, by = 2)), 
+##  removeFirst = FALSE, nBreaks = 10, blockSize = NULL, 
+##  corFnc = cor, corOptions = list(use = 'p'), 
+##  networkType = "unsigned",
+##  moreNetworkConcepts = FALSE,
+##  gcInterval = NULL,
+##  verbose = 0, indent = 0)
+#
+##softPower = 20; #reached 90 R2 # Here 20 = 0.80237680
+# #Error in cor_mat^power : non-numeric argument to binary operator
+##adjacency = adjacency(datExpr, power = "softPower", type="signed"); # Error in cor_mat^power : non-numeric argument to binary operator
+#
+#
+## --> Error in cor_mat^power : non-numeric argument to binary operator
+#
+#
+######################
+## making modules
+#
+#load(file = "dataInput_subset.Rda")
+#load(file = "sft_signed.Rda")
+#
+#
+###s.th=18 # re-specify according to previous section
+#s.th=6 # re-specify according to previous section
+### the following two lines take a long time, prepare to wait 15-20 min
+### (if you don;t want to wait but proceed with exercise, skip to next section - we have results of this one recorded already)
+#adjacency = adjacency(datExpr, power = s.th, type="signed");
+#
+#save(adjacency,file="adjacency.RData")
+#
+#TOM = TOMsimilarity(adjacency,TOMType="signed");
+#dissTOM = 1-TOM
+#save(adjacency, TOM, dissTOM, file="adjacency_2.RData")
+## Call the hierarchical clustering function
+#geneTree = flashClust(as.dist(dissTOM), method = "average");
+#
+## We like large modules, so we set the minimum module size relatively high:
+#minModuleSize = 30; 
+#dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
+#                            deepSplit = 2, pamRespectsDendro = FALSE,
+#                            minClusterSize = minModuleSize);
+#dynamicColors = labels2colors(dynamicMods)
+#table(dynamicColors)
+#
+#datt = datExpr
+#
+## Calculate eigengenes
+#MEList = moduleEigengenes(datt, colors = dynamicColors)
+#MEs = MEList$eigengenes
+## Calculate dissimilarity of module eigengenes
+#MEDiss = 1-cor(MEs);
+#METree = flashClust(as.dist(MEDiss), method = "average");
+#
+#save(dynamicMods,dynamicColors,MEs,METree,geneTree,file="1stPassModules.RData")
 
 #########################
 # merging modules:
@@ -284,7 +284,8 @@ load('1stPassModules.RData')
 mm=load('1stPassModules.RData')
 mm
 library(WGCNA)
-lnames=load('wgcnaData.RData')
+#lnames=load('wgcnaData.RData')
+datt = datExpr
 # traits
 print('head(datt)')
 head(datt)
