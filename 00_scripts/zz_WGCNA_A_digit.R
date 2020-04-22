@@ -482,7 +482,7 @@ table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
 inModuleBinary=as.numeric(moduleColors==whichModule)
-combo=data.frame("gene"=row.names(logcpm_test),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
+combo=data.frame("gene"=row.names(datExpr),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
 write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 
 ################
@@ -494,13 +494,13 @@ allkME =as.data.frame(signedKME(datt, MEs))
 gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
 library(pheatmap)
 
-whichModule="darkslateblue"
+whichModule="darkturquoise"
 top=30 # number of named top-kME genes to plot
 
 datME=MEs
 datExpr=datt
 modcol=paste("kME",whichModule,sep="")
-sorted=logcpm_test[order(allkME[,modcol],decreasing=T),]
+sorted=datExpr[order(allkME[,modcol],decreasing=T),]
 head(sorted)
 # selection top N names genes, attaching gene names
 gnames=c();counts=0;hubs=c()
@@ -524,4 +524,5 @@ contrasting2 = colorRampPalette(rev(c("chocolate1","chocolate1","#FEE090","grey1
 contrasting3 = colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan","cyan")))(100)
 
 pheatmap(hubs,scale="row",col=contrasting2,border_color=NA,treeheight_col=0,cex=0.9,cluster_rows=F)
+
 
