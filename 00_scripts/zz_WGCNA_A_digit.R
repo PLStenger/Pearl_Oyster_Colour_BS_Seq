@@ -15,6 +15,7 @@ library(flashClust)
 library(ape)
 library("assertthat")
 library("scales")
+library(pheatmap)
 
 #setwd("~/Desktop/WGCNA_A_digitifera")
 setwd("/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/11_A_digitifera_mat")
@@ -493,7 +494,7 @@ write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 allkME =as.data.frame(signedKME(datt, MEs))
 #amil_iso2gene.tab = may be means Acropora millepora Inferred from Sequence Orthology to gene ? (half an hour of reflexion....... --')
 #gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
-gg=read.table("datbase.tab",sep="\t")
+gg=read.table("datbase.tab",sep="\t", quote = "")
 
 library(pheatmap)
 
@@ -527,5 +528,3 @@ contrasting2 = colorRampPalette(rev(c("chocolate1","chocolate1","#FEE090","grey1
 contrasting3 = colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan","cyan")))(100)
 
 pheatmap(hubs,scale="row",col=contrasting2,border_color=NA,treeheight_col=0,cex=0.9,cluster_rows=F)
-
-
