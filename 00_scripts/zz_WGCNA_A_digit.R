@@ -470,8 +470,8 @@ length(datExpr[1,moduleColors==which.module ]) # number of genes in chosen modul
 
 library(WGCNA)
 load(file = "networkdata_signed.RData") # moduleColors, MEs
-#load(file = "wgcnaData.RData") # vsd table
-#load(file = "../data4wgcna.RData") # vsd table
+load(file = "wgcnaData.RData") # vsd table
+load(file = "../data4wgcna.RData") # vsd table
 
 # calculating modul memberships for all genes for all modules
 allkME =as.data.frame(signedKME(datt, MEs)) 
@@ -482,7 +482,7 @@ table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
 inModuleBinary=as.numeric(moduleColors==whichModule)
-combo=data.frame("gene"=row.names(datExpr),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
+combo=data.frame("gene"=row.names(t(datExpr)),"Fish_kME"=allkME[,whichModule]*inModuleBinary)
 write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 
 ################
@@ -500,7 +500,7 @@ top=30 # number of named top-kME genes to plot
 datME=MEs
 datExpr=datt
 modcol=paste("kME",whichModule,sep="")
-sorted=datExpr[order(allkME[,modcol],decreasing=T),]
+sorted=t(datExpr)[order(allkME[,modcol],decreasing=T),]
 head(sorted)
 # selection top N names genes, attaching gene names
 gnames=c();counts=0;hubs=c()
@@ -524,5 +524,6 @@ contrasting2 = colorRampPalette(rev(c("chocolate1","chocolate1","#FEE090","grey1
 contrasting3 = colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan","cyan")))(100)
 
 pheatmap(hubs,scale="row",col=contrasting2,border_color=NA,treeheight_col=0,cex=0.9,cluster_rows=F)
+
 
 
