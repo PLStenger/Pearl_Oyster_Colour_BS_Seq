@@ -109,7 +109,7 @@ plot(sampleTree, main = "Sample clustering", sub="", xlab="", cex.lab = 1.5,
 
 
 # Plot a line to show the cut
-abline(h = 400, col = "pink");
+abline(h = 400, col = "blue");
 # Determine cluster under the line
 clust = cutreeStatic(sampleTree, cutHeight = 400, minSize = 10)
 table(clust)
@@ -151,7 +151,7 @@ collectGarbage();
 
 # Re-cluster samples
 sampleTree2 = hclust(dist(datExpr), method = "average")
-# Convert traits to a color representation: white means low, pink means high, grey means missing entry
+# Convert traits to a color representation: white means low, blue means high, grey means missing entry
 traitColors = numbers2colors(datTraits,signed= FALSE);
 # Plot the sample dendrogram and the colors underneath.
 pdf("dendo_heatmap.pdf",width=12,height=9)
@@ -173,7 +173,7 @@ save(datExpr, datTraits, file = "dataInput_subset.Rda")
 #setting is important, do not omit.
 options(stringsAsFactors = FALSE);
 ## Allow multi-threading within WGCNA. At present this call is necessary.
-## Any error here may be ignopink but you may want to update WGCNA if you see one.
+## Any error here may be ignoblue but you may want to update WGCNA if you see one.
 ## Caution: skip this line if you run RStudio or other third-party R environments.
 ## See note above.
 ##enableWGCNAThreads()
@@ -199,14 +199,14 @@ options(stringsAsFactors = FALSE);
 #     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
 #     main = paste("Scale independence"));
 #text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
-#     labels=powers,cex=cex1,col="pink");
+#     labels=powers,cex=cex1,col="blue");
 ## this line corresponds to using an R^2 cut-off of h
-#abline(h=0.84,col="pink") 
+#abline(h=0.84,col="blue") 
 ## Mean connectivity as a function of the soft-thresholding power
 #plot(sft$fitIndices[,1], sft$fitIndices[,5],
 #     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
 #     main = paste("Mean connectivity"))
-#text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="pink")
+#text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="blue")
 #
 #
 #
@@ -217,7 +217,7 @@ options(stringsAsFactors = FALSE);
 ##  datExpr, 
 ##  dataIsExpr = TRUE,
 ##  weights = NULL,
-##  RsquapinkCut = 0.85, 
+##  RsquablueCut = 0.85, 
 ##  powerVector = c(seq(1, 10, by = 1), seq(12, 20, by = 2)), 
 ##  removeFirst = FALSE, nBreaks = 10, blockSize = NULL, 
 ##  corFnc = cor, corOptions = list(use = 'p'), 
@@ -301,7 +301,7 @@ sizeGrWindow(7, 6)
 plot(METree, main = "Clustering of module eigengenes",
      xlab = "", sub = "")
 # Plot the cut line into the dendrogram
-abline(h=MEDissThres, col = "pink")  # on 2nd pass: does this cut height meet your merging goals? If not, reset MEDissThres and replot
+abline(h=MEDissThres, col = "blue")  # on 2nd pass: does this cut height meet your merging goals? If not, reset MEDissThres and replot
 
 # Call an automatic merging function
 merge = mergeCloseModules(datt, dynamicColors, cutHeight = MEDissThres, verbose = 3)
@@ -459,7 +459,7 @@ for(module in modNames[1:length(modNames)]){
 #load(file = "networkdata_signed.RData")
 #load(file = "wgcnaData.RData");
 
-which.module="pink" 
+which.module="blue" 
 datME=MEs
 datExpr=datt
 #quartz()
@@ -486,7 +486,7 @@ library(WGCNA)
 allkME =as.data.frame(signedKME(datt, MEs)) 
 names(allkME)=gsub("kME","",names(allkME))
 
-whichModule="pink"
+whichModule="blue"
 table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
@@ -500,13 +500,13 @@ write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 #load(file = "networkdata_signed.RData")
 #load(file = "wgcnaData.RData");
 allkME =as.data.frame(signedKME(datt, MEs))
-#amil_iso2gene.tab = may be means Acropora millepora Inferpink from Sequence Orthology to gene ? (half an hour of reflexion....... --')
+#amil_iso2gene.tab = may be means Acropora millepora Inferblue from Sequence Orthology to gene ? (half an hour of reflexion....... --')
 #gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
 gg=read.table("datbase.tab",sep="\t", quote = "")
 
 library(pheatmap)
 
-whichModule="pink"
+whichModule="blue"
 top=30 # number of named top-kME genes to plot
 
 datME=MEs
@@ -536,4 +536,3 @@ contrasting2 = colorRampPalette(rev(c("chocolate1","chocolate1","#FEE090","grey1
 contrasting3 = colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan","cyan")))(100)
 
 pheatmap(hubs,scale="row",col=contrasting2,border_color=NA,treeheight_col=0,cex=0.9,cluster_rows=F)
-
