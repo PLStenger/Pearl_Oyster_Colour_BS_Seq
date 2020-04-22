@@ -469,9 +469,9 @@ length(datExpr[1,moduleColors==which.module ]) # number of genes in chosen modul
 # saving selected modules for GO and KOG analysis (two-parts: Fisher test, MWU test within-module)
 
 library(WGCNA)
-load(file = "networkdata_signed.RData") # moduleColors, MEs
-load(file = "wgcnaData.RData") # vsd table
-load(file = "../data4wgcna.RData") # vsd table
+#load(file = "networkdata_signed.RData") # moduleColors, MEs
+#load(file = "wgcnaData.RData") # vsd table
+#load(file = "../data4wgcna.RData") # vsd table
 
 # calculating modul memberships for all genes for all modules
 allkME =as.data.frame(signedKME(datt, MEs)) 
@@ -488,8 +488,8 @@ write.csv(combo,file=paste(whichModule,".csv",sep=""),row.names=F,quote=F)
 ################
 # plotting heatmap for named top-kME genes
 
-load(file = "networkdata_signed.RData")
-load(file = "wgcnaData.RData");
+#load(file = "networkdata_signed.RData")
+#load(file = "wgcnaData.RData");
 allkME =as.data.frame(signedKME(datt, MEs))
 gg=read.table("../heatmaps/amil_iso2gene.tab",sep="\t")
 library(pheatmap)
