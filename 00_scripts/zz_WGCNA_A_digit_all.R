@@ -211,7 +211,7 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 
 
 save(sft,file="sft_signed.Rda")
-View(sft$fitIndices)
+#View(sft$fitIndices)
 
 #pickSoftThreshold(
 #  datExpr, 
@@ -242,7 +242,7 @@ load(file = "sft_signed.Rda")
 
 
 ##s.th=18 # re-specify according to previous section
-s.th=20 # re-specify according to previous section
+s.th=6 # re-specify according to previous section
 ## the following two lines take a long time, prepare to wait 15-20 min
 ## (if you don;t want to wait but proceed with exercise, skip to next section - we have results of this one recorded already)
 adjacency = adjacency(datExpr, power = s.th, type="signed");
