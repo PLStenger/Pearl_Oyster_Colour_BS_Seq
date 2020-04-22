@@ -459,7 +459,7 @@ for(module in modNames[1:length(modNames)]){
 #load(file = "networkdata_signed.RData")
 #load(file = "wgcnaData.RData");
 
-which.module="turquoise" 
+which.module="black" 
 datME=MEs
 datExpr=datt
 #quartz()
@@ -486,7 +486,7 @@ library(WGCNA)
 allkME =as.data.frame(signedKME(datt, MEs)) 
 names(allkME)=gsub("kME","",names(allkME))
 
-whichModule="turquoise"
+whichModule="black"
 table(moduleColors==whichModule) # how many genes are in it?
 
 # Saving data for Fisher-MWU combo test (GO_MWU)
@@ -506,7 +506,7 @@ gg=read.table("datbase.tab",sep="\t", quote = "")
 
 library(pheatmap)
 
-whichModule="turquoise"
+whichModule="black"
 top=30 # number of named top-kME genes to plot
 
 datME=MEs
