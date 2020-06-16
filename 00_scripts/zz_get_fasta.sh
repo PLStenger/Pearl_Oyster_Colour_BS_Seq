@@ -13,4 +13,4 @@ $BEDTOOLS_ENV
 
 cd $DATADIRECTORY
 
-bedtools getfasta -fi sspace.final.scaffolds_02.fasta -gff Real_genes_with_intron_length.gff > Real_genes_with_intron_length.fasta
+bedtools getfasta -fi sspace.final.scaffolds_02.fasta -bed Real_genes_with_intron_length.gff > Real_genes_with_intron_length.fasta
