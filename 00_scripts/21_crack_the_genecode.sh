@@ -45,4 +45,4 @@ $BEDTOOLS_ENV
 #bedtools intersect -b significant_met.gff -a gencode_02.gff -wa -wb > significant_met_gencode.txt
 
 
-bedtools intersect -b EVM_combined.gff3 -a gencode_04.bed -wa -wb > EVM_combined_gencode.gff
+bedtools intersect -b EVM_combined.gff -a gencode_04.bed -wa -wb > EVM_combined_gencode.gff
