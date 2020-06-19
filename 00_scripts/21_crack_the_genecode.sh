@@ -45,4 +45,6 @@ $BEDTOOLS_ENV
 #bedtools intersect -b significant_met.gff -a gencode_02.gff -wa -wb > significant_met_gencode.txt
 
 
-bedtools intersect -b EVM_combined.gff -a gencode_04.bed -wa -wb > EVM_combined_gencode.gff
+#bedtools intersect -b EVM_combined.gff -a gencode_04.bed -wa -wb > EVM_combined_gencode.gff
+
+bedtools intersect -b EVM_combined_gencode.gff -a gencode_02.gff -wa -wb > 1-J-2_cpg_count.txt_no_first_line_rearranged5.txt_EVM_combined_gencode.gff
