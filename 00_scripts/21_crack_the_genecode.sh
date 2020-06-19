@@ -3,8 +3,11 @@
 #PBS -l walltime=48:00:00
 #PBS -l select=1:ncpus=28:mem=115g
 
-DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
-DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
+#DATADIRECTORY=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
+#DATAOUTPUT=/home/datawork-ihpe/Pearl_Oyster_Colour_BS_Seq/06_bismark
+
+DATADIRECTORY=/home1/scratch/plstenge/genome
+DATAOUTPUT=/home1/scratch/plstenge/genome
 BEDTOOLS_ENV=". /appli/bioinfo/bedtools/2.27.1/env.sh" # https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html
 
 cd $DATADIRECTORY
@@ -39,4 +42,7 @@ $BEDTOOLS_ENV
 #bedtools intersect -b 3-V-620_cpg_count.txt_no_first_line_rearranged5.txt -a gencode_04.bed -wa -wb > 3-V-620_cpg_count_gencode.txt
 #
 
-bedtools intersect -b significant_met.gff -a gencode_02.gff -wa -wb > significant_met_gencode.txt
+#bedtools intersect -b significant_met.gff -a gencode_02.gff -wa -wb > significant_met_gencode.txt
+
+
+bedtools intersect -b EVM_combined.gff3 -a gencode_02.gff -wa -wb > EVM_combined_gencode.gff
