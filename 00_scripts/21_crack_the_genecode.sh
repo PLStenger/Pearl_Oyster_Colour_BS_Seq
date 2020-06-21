@@ -57,7 +57,8 @@ for FILE in $(ls $DATADIRECTORY/*_no_first_line_rearranged5.txt)
 do
 
 #bedtools intersect -b ${FILE##*/} -a EVM_combined_gencode.gff -wa -wb > ${FILE##*/}_EVM_combined_gencode.gff
-bedtools intersect -b ${FILE##*/} -a EVM_combined_gene_gencode.gff -wa -wb > ${FILE##*/}_EVM_combined_gene_gencode.gff
+#bedtools intersect -b ${FILE##*/} -a EVM_combined_gene_gencode.gff -wa -wb > ${FILE##*/}_EVM_combined_gene_gencode.gff
+bedtools intersect -b EVM_combined_gene_gencode.gff -a ${FILE##*/} > ${FILE##*/}_EVM_combined_gene_gencode.gff
 
 done ;
 
