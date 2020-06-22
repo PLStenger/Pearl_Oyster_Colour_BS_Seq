@@ -53,12 +53,13 @@ $BEDTOOLS_ENV
 
 #bedtools intersect -b EVM_combined_gene.gff -a gencode_02.gff -wa -wb > EVM_combined_gene_gencode.gff
 
-for FILE in $(ls $DATADIRECTORY/*_no_first_line_rearranged5.txt)
-do
+#for FILE in $(ls $DATADIRECTORY/*_no_first_line_rearranged5.txt)
+#do
 
 #bedtools intersect -b ${FILE##*/} -a EVM_combined_gencode.gff -wa -wb > ${FILE##*/}_EVM_combined_gencode.gff
-#bedtools intersect -b ${FILE##*/} -a EVM_combined_gene_gencode.gff -wa -wb > ${FILE##*/}_EVM_combined_gene_gencode.gff
-bedtools intersect -b EVM_combined_gene_gencode.gff -a ${FILE##*/}  -wa -wb > ${FILE##*/}_EVM_combined_gene_gencode.gff
 
-done ;
+#done ;
+
+bedtools intersect -b 1-J-2_cpg_count.txt_no_first_line_rearranged5.txt -a EVM_combined_gene_upstream.gff3 -wa -wb > 1-J-2_cpg_count.txt_no_first_line_rearranged5.txt_EVM_combined_gene_upstream.gff
+
 
